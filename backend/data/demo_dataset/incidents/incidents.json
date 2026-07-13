@@ -1,0 +1,57 @@
+[
+  {
+    "incident_id": "INC-2025-0047",
+    "date": "2025-07-22",
+    "type": "EQUIPMENT_FAILURE",
+    "severity": "MEDIUM",
+    "equipment_tag": "P-101",
+    "description": "Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay 7. Area cordoned, no ignition. Pump switched to standby P-102.",
+    "root_cause": "Overdue maintenance and seal degradation accelerated by sustained high-temperature operation above 70\u00b0C. Seal specification marginal for thermal cycling duty.",
+    "corrective_action": "Seal replaced (WO-2025-0388). Preventive maintenance interval reduced from 180 to 90 days. Seal specification review with OEM initiated.",
+    "reported_by": "J.P. Sharma"
+  },
+  {
+    "incident_id": "INC-2024-0089",
+    "date": "2024-12-03",
+    "type": "NEAR_MISS",
+    "severity": "HIGH",
+    "equipment_tag": "V-203",
+    "description": "Technician entered knockout drum V-203 for inspection when portable gas detector alarmed at 8% LEL inside vessel. Entry aborted immediately. Gas test had been performed 45 minutes before entry.",
+    "root_cause": "Gas testing performed more than 30 minutes before entry, against OISD-105/SOP-CS-012 requirement. Residual hydrocarbon desorbed from sludge after initial test.",
+    "corrective_action": "SOP-CS-012 re-briefed to all crews. Gas test validity window strictly enforced at 30 minutes. Continuous monitoring made mandatory for vessels with sludge history.",
+    "reported_by": "Kavita Rao"
+  },
+  {
+    "incident_id": "INC-2024-0031",
+    "date": "2024-05-17",
+    "type": "NEAR_MISS",
+    "severity": "MEDIUM",
+    "equipment_tag": "V-201",
+    "description": "During confined space entry preparation for V-201, attendant found entry log incomplete and second gas test skipped after lunch break re-entry.",
+    "root_cause": "Re-entry after break treated as continuation of original entry. Gas testing not repeated as required before re-entry.",
+    "corrective_action": "Re-entry gas testing requirement added to PTW checklist. Toolbox talk conducted across Unit 3 and Unit 4.",
+    "reported_by": "Kavita Rao"
+  },
+  {
+    "incident_id": "INC-2025-0102",
+    "date": "2025-09-28",
+    "type": "EQUIPMENT_FAILURE",
+    "severity": "MEDIUM",
+    "equipment_tag": "HE-303",
+    "description": "Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days until repair.",
+    "root_cause": "Chloride stress corrosion cracking at tube-to-tubesheet joints. Cooling water chloride excursion in Aug 2025 identified as contributing factor.",
+    "corrective_action": "6 tubes plugged (WO-2025-0489). Cooling water chloride monitoring frequency increased to daily. Metallurgy upgrade study initiated.",
+    "reported_by": "Arjun Mehta"
+  },
+  {
+    "incident_id": "INC-2026-0011",
+    "date": "2026-01-29",
+    "type": "PROCESS_UPSET",
+    "severity": "LOW",
+    "equipment_tag": "P-201",
+    "description": "Unit 4 feed interruption for 40 minutes when P-201 tripped on seal failure and standby did not auto-start due to selector switch left in manual.",
+    "root_cause": "Seal failure (second in 8 months, same pattern as P-101). Standby auto-start defeated by switch position \u2014 human factor.",
+    "corrective_action": "Seal replaced (WO-2026-0114). Selector switch position added to shift handover checklist.",
+    "reported_by": "J.P. Sharma"
+  }
+]

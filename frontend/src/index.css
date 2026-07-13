@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   GyanVriksh — TVA Temporal Monitor UI
+   Authentic Time Variance Authority terminal: near-black screens,
+   bright orange line-art, beveled metal frames, corner brackets,
+   hatched dividers, halftone portraits, monospace data.
+   Reference: TVA "MISSION INFO" monitor.
+   ============================================================ */
+
+:root {
+  --tva-black: #040507;
+  --tva-screen: #0e0f12;
+  --tva-screen-2: #08090c;
+  --tva-orange: #f9861a;
+  --tva-orange-bright: #ffa23e;
+  --tva-orange-dim: #b86517;
+  --tva-orange-soft: rgba(249, 134, 26, 0.16);
+  --tva-metal-1: #4b443c;
+  --tva-metal-2: #211c18;
+  --tva-cream: #efe7d7;
+  --tva-line: rgba(249, 134, 26, 0.42);
+}
+
+* { scrollbar-width: thin; scrollbar-color: #f9861a #1a1613; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: #120f0d; }
+*::-webkit-scrollbar-thumb { background: #6a3d0e; border: 2px solid #120f0d; }
+*::-webkit-scrollbar-thumb:hover { background: #f9861a; }
+
+html { font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+
+body {
+  @apply antialiased;
+  color: var(--tva-cream);
+  background-color: var(--tva-black);
+  background-image:
+    radial-gradient(70% 60% at 50% -10%, rgba(249, 134, 26, 0.10), transparent 60%),
+    radial-gradient(90% 80% at 50% 120%, rgba(249, 134, 26, 0.06), transparent 60%),
+    linear-gradient(rgba(249, 134, 26, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 134, 26, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  background-attachment: fixed;
+}
+/* CRT scanlines + subtle vignette */
+body::before {
+  content: "";
+  position: fixed; inset: 0; pointer-events: none; z-index: 1;
+  background:
+    repeating-linear-gradient(to bottom, rgba(0,0,0,0.16) 0 1px, transparent 1px 3px),
+    radial-gradient(120% 120% at 50% 50%, transparent 62%, rgba(0,0,0,0.5) 100%);
+}
+#root { position: relative; z-index: 2; }
+
+/* ============ PANELS (the "screen") ============ */
+.card {
+  position: relative;
+  background: linear-gradient(180deg, var(--tva-screen), var(--tva-screen-2));
+  border: 1px solid var(--tva-line);
+  border-radius: 2px;
+  padding: 1rem;
+  box-shadow:
+    inset 0 0 0 3px #0b0908,
+    inset 0 0 40px rgba(249, 134, 26, 0.05),
+    0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover { border-color: var(--tva-orange); box-shadow: inset 0 0 0 3px #0b0908, inset 0 0 50px rgba(249,134,26,0.10), 0 0 0 1px rgba(249,134,26,0.3), 0 10px 34px rgba(0,0,0,0.65); }
+/* corner brackets on any .tva-corners element */
+.tva-corners::before, .tva-corners::after,
+.tva-corners > .corner-bl, .tva-corners > .corner-br { pointer-events: none; }
+
+/* ============ BUTTONS (analog switches) ============ */
+.btn {
+  @apply px-4 py-2 font-bold uppercase transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  font-family: "Space Mono", ui-monospace, monospace;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  border-radius: 2px;
+}
+.btn-gold {
+  @apply btn;
+  color: #140b03;
+  background: var(--tva-orange);
+  border: 1px solid var(--tva-orange-bright);
+  box-shadow: 0 0 0 1px #0b0908, 0 0 16px rgba(249, 134, 26, 0.4), inset 0 1px 0 rgba(255,255,255,0.3);
+}
+.btn-gold:hover:not(:disabled) { background: var(--tva-orange-bright); box-shadow: 0 0 0 1px #0b0908, 0 0 26px rgba(249,134,26,0.7); }
+.btn-amber { @apply btn; color: #140b03; background: var(--tva-orange-dim); }
+.btn-ghost {
+  @apply btn;
+  color: var(--tva-orange);
+  background: transparent;
+  border: 1px solid var(--tva-line);
+}
+.btn-ghost:hover:not(:disabled) { background: var(--tva-orange-soft); border-color: var(--tva-orange); color: var(--tva-orange-bright); }
+
+/* ============ INPUTS ============ */
+.input {
+  @apply px-3 py-2 w-full transition-colors;
+  font-family: "Space Mono", ui-monospace, monospace;
+  border-radius: 2px;
+  background: #0c0a08;
+  border: 1px solid var(--tva-line);
+  color: var(--tva-orange-bright);
+}
+.input:focus { outline: none; border-color: var(--tva-orange); box-shadow: 0 0 0 2px var(--tva-orange-soft), inset 0 0 20px rgba(249,134,26,0.06); }
+.input::placeholder { color: #7a5a34; }
+
+/* ============ BADGES / PILLS ============ */
+.badge { @apply text-xs px-2 py-0.5 font-bold uppercase; border-radius: 2px; font-family: "Space Mono", monospace; letter-spacing: 0.05em; }
+/* inverted TVA status pill: orange fill, black text */
+.status-pill {
+  font-family: "Space Mono", monospace;
+  background: var(--tva-orange);
+  color: #140b03;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 10px;
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(249, 134, 26, 0.5);
+}
+
+/* ============ UTILITIES ============ */
+.gradient-text {
+  background: linear-gradient(120deg, #ffb765, #f9861a 60%, #b5651c);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.glass { background: rgba(21, 18, 16, 0.78); backdrop-filter: blur(10px); border: 1px solid var(--tva-line); }
+.glow-gold { box-shadow: 0 0 26px rgba(249, 134, 26, 0.5); }
+.mono { font-family: "Space Mono", ui-monospace, monospace; }
+
+/* TVA case-file monospace label */
+.kicker {
+  font-family: "Space Mono", ui-monospace, monospace;
+  text-transform: uppercase; letter-spacing: 0.34em; font-size: 0.64rem; color: var(--tva-orange);
+}
+.page-title { @apply text-2xl font-bold uppercase; letter-spacing: 0.04em; }
+
+/* hatched divider  ///////  */
+.hatch {
+  background-image: repeating-linear-gradient(-45deg, var(--tva-orange) 0 2px, transparent 2px 6px);
+  opacity: 0.9;
+}
+.brass-rule { height: 1px; background: linear-gradient(90deg, transparent, var(--tva-orange), transparent); }
+
+/* cream printed "paper" surface */
+.paper {
+  background: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0 2px, transparent 2px 4px), #efe7d7;
+  color: #1a130c; border: 1px solid var(--tva-orange); border-radius: 2px;
+}
+
+/* terminal readout */
+.terminal {
+  font-family: "Space Mono", ui-monospace, monospace;
+  background: #0b0908; border: 1px solid var(--tva-line); border-radius: 2px;
+  color: var(--tva-orange-bright); box-shadow: inset 0 0 24px rgba(249,134,26,0.06);
+}
+
+/* halftone / dithered portrait like the TVA monitor mugshots */
+.halftone {
+  filter: grayscale(1) contrast(1.25) brightness(0.95) sepia(0.5) saturate(4) hue-rotate(-12deg);
+  mix-blend-mode: screen;
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes gv-fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes gv-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes gv-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes gv-spin { to { transform: rotate(360deg); } }
+@keyframes gv-flicker { 0%,100% { opacity: 1; } 92% { opacity: 1; } 94% { opacity: 0.75; } 96% { opacity: 1; } }
+@keyframes gv-pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(249,134,26,0.5); }
+  70% { box-shadow: 0 0 0 12px rgba(249,134,26,0); }
+  100% { box-shadow: 0 0 0 0 rgba(249,134,26,0); }
+}
+.animate-fade-up { animation: gv-fade-up 0.6s cubic-bezier(0.22,1,0.36,1) both; }
+.animate-fade-in { animation: gv-fade 0.7s ease both; }
+.animate-float { animation: gv-float 4s ease-in-out infinite; }
+.animate-pulse-ring { animation: gv-pulse-ring 2s infinite; }
+.animate-flicker { animation: gv-flicker 6s linear infinite; }
+.spin-slow { animation: gv-spin 60s linear infinite; }
+
+.stagger > * { animation: gv-fade-up 0.6s cubic-bezier(0.22,1,0.36,1) both; }
+.stagger > *:nth-child(1) { animation-delay: 0.02s; }
+.stagger > *:nth-child(2) { animation-delay: 0.08s; }
+.stagger > *:nth-child(3) { animation-delay: 0.14s; }
+.stagger > *:nth-child(4) { animation-delay: 0.20s; }
+.stagger > *:nth-child(5) { animation-delay: 0.26s; }
+.stagger > *:nth-child(6) { animation-delay: 0.32s; }

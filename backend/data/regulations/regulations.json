@@ -1,0 +1,114 @@
+[
+  {
+    "reg_id": "OISD-116-S5.3",
+    "standard": "OISD-116",
+    "section": "5.3",
+    "title": "Rotating Equipment Maintenance",
+    "compliance_required": true,
+    "text": "All rotating equipment shall be maintained as per OEM recommendations with frequency not exceeding 6 months for critical rotating equipment. Maintenance history shall be documented and reviewed annually for repeat failures."
+  },
+  {
+    "reg_id": "OISD-116-S5.3.2",
+    "standard": "OISD-116",
+    "section": "5.3.2",
+    "title": "Permit Requirements for Rotating Equipment Maintenance",
+    "compliance_required": true,
+    "text": "A permit to work must be issued and signed by a qualified safety officer (minimum Grade-B HSE) before any maintenance on rotating equipment. The permit shall record isolation status, depressurisation verification and electrical isolation."
+  },
+  {
+    "reg_id": "OISD-116-S5.4",
+    "standard": "OISD-116",
+    "section": "5.4",
+    "title": "Condition Monitoring",
+    "compliance_required": true,
+    "text": "Critical rotating equipment shall be covered by periodic vibration monitoring. Alert and trip limits shall be defined and readings recorded. Repeat exceedance of alert limits shall trigger a documented engineering review."
+  },
+  {
+    "reg_id": "OISD-116-S7.1",
+    "standard": "OISD-116",
+    "section": "7.1",
+    "title": "Heat Exchanger Inspection",
+    "compliance_required": true,
+    "text": "Shell and tube heat exchangers in hydrocarbon service shall undergo tube integrity inspection (eddy current or equivalent) at intervals not exceeding statutory inspection frequency. Tubes with wall loss exceeding 40% shall be plugged or replaced."
+  },
+  {
+    "reg_id": "OISD-105-S4.3",
+    "standard": "OISD-105",
+    "section": "4.3",
+    "title": "Gas Testing Before Vessel Entry",
+    "compliance_required": true,
+    "text": "Entry into any confined space shall be permitted only after gas testing for oxygen, flammables and toxic gases. Gas testing shall be conducted not more than 30 minutes prior to entry. Testing shall be repeated after any interruption of work exceeding 15 minutes."
+  },
+  {
+    "reg_id": "OISD-105-S4.4",
+    "standard": "OISD-105",
+    "section": "4.4",
+    "title": "Attendant Requirement",
+    "compliance_required": true,
+    "text": "A trained attendant shall be stationed outside the confined space for the entire duration of entry, maintaining continuous communication with entrants and with authority to order evacuation."
+  },
+  {
+    "reg_id": "OISD-117-S6.2",
+    "standard": "OISD-117",
+    "section": "6.2",
+    "title": "Safety Instrumented Systems Proof Testing",
+    "compliance_required": true,
+    "text": "Safety instrumented functions and pressure relief devices shall be proof tested at documented intervals. Relief valve set pressure verification shall be certified and records retained for the life of the equipment."
+  },
+  {
+    "reg_id": "OISD-118-S4.3",
+    "standard": "OISD-118",
+    "section": "4.3",
+    "title": "Layout Spacing for Pump Stations",
+    "compliance_required": true,
+    "text": "Pump stations handling flammable hydrocarbons shall maintain minimum spacing from ignition sources and provide open access for firefighting from at least two directions."
+  },
+  {
+    "reg_id": "OISD-137-S5.1",
+    "standard": "OISD-137",
+    "section": "5.1",
+    "title": "Pressure Vessel Statutory Inspection",
+    "compliance_required": true,
+    "text": "Every pressure vessel shall undergo internal inspection at intervals not exceeding those prescribed under the Static & Mobile Pressure Vessels Rules. Inspection records including thickness surveys shall be maintained in an inspection dossier."
+  },
+  {
+    "reg_id": "OISD-141-S6.1",
+    "standard": "OISD-141",
+    "section": "6.1",
+    "title": "Leak Response and Ignition Control",
+    "compliance_required": true,
+    "text": "Facilities shall have a documented emergency procedure for hydrocarbon leaks covering source isolation, area cordoning, ignition source elimination and vapour dispersion. All leaks above defined thresholds shall be investigated with documented root cause analysis."
+  },
+  {
+    "reg_id": "OISD-145-S3.2",
+    "standard": "OISD-145",
+    "section": "3.2",
+    "title": "Permit to Work System Requirements",
+    "compliance_required": true,
+    "text": "A formal permit to work system shall govern all maintenance activities. Hot work and confined space entry permits shall be countersigned by a qualified safety officer. Permits shall be valid for a maximum of one shift with revalidation requiring fresh gas testing where applicable."
+  },
+  {
+    "reg_id": "FACTORIES-ACT-1948-S36",
+    "standard": "Factories Act 1948",
+    "section": "36",
+    "title": "Precautions Against Dangerous Fumes and Gases",
+    "compliance_required": true,
+    "text": "No person shall be required or allowed to enter any chamber, tank, vat, pit, pipe, flue or other confined space in which any gas, fume, vapour or dust is likely to be present to such an extent as to involve risk, unless it is certified safe for entry by a competent person based on a test carried out by that person, or the person entering is wearing suitable breathing apparatus."
+  },
+  {
+    "reg_id": "FACTORIES-ACT-1948-S31",
+    "standard": "Factories Act 1948",
+    "section": "31",
+    "title": "Pressure Plant",
+    "compliance_required": true,
+    "text": "Where any plant or machinery or part thereof is operated at a pressure above atmospheric pressure, effective measures shall be taken to ensure that the safe working pressure is not exceeded."
+  },
+  {
+    "reg_id": "PESO-1934-R143",
+    "standard": "PESO (Petroleum Rules)",
+    "section": "143",
+    "title": "Storage and Handling of Petroleum",
+    "compliance_required": true,
+    "text": "Petroleum shall be stored and handled only in facilities licensed under these rules. Repairs to any tank or apparatus that has contained petroleum shall not commence until it has been certified gas-free by a competent person."
+  }
+]

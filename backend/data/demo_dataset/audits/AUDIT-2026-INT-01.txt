@@ -1,0 +1,7 @@
+BHARAT CHEMICALS LIMITED — INTERNAL HSE AUDIT REPORT AUDIT-2026-INT-01
+Date: 20-Feb-2026 | Auditor: Kavita Rao (Grade-B HSE) | Scope: Unit 3 PTW system
+Finding 1 (MAJOR): 3 of 25 sampled cold work permits for rotating equipment maintenance were
+not countersigned by an HSE officer. SOP-MAINT-047 Step 1 does not specify signatory
+authority, creating ambiguity. Reference: OISD-116 §5.3.2, OISD-145 §3.2.
+Finding 2 (OBSERVATION): PTW training records current for all issuers.
+Recommendation: Revise SOP-MAINT-047 to explicitly require Grade-B HSE countersignature.

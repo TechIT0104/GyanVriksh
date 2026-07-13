@@ -1,0 +1,2454 @@
+{
+  "summary": {
+    "total": 100,
+    "correct": 57,
+    "partial": 18,
+    "wrong": 25,
+    "errors": 0,
+    "accuracy_pct": 57.0,
+    "accuracy_with_partial_pct": 66.0,
+    "answers_with_citations_pct": 79.0,
+    "median_response_s": 32.48,
+    "by_category": {
+      "COMPLIANCE_CHECK": {
+        "n": 3,
+        "correct": 1
+      },
+      "CROSS_ENTITY_REASONING": {
+        "n": 1,
+        "correct": 0
+      },
+      "FACTUAL_LOOKUP": {
+        "n": 72,
+        "correct": 41
+      },
+      "FAILURE_ANALYSIS": {
+        "n": 14,
+        "correct": 7
+      },
+      "KNOWLEDGE_CAPSULE": {
+        "n": 4,
+        "correct": 3
+      },
+      "KNOWLEDGE_CLIFF": {
+        "n": 2,
+        "correct": 1
+      },
+      "PROCEDURE_QUERY": {
+        "n": 4,
+        "correct": 4
+      }
+    }
+  },
+  "results": [
+    {
+      "q": "When was P-101 last serviced and what was done?",
+      "truth": "15-Mar-2026, mechanical seal replacement (WO-2026-0831) by Ramesh Kumar",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q001",
+      "answer": " P-101 was last serviced on 2026-03-15. The work order WO-2026-0831 involved mechanical seal replacement [Doc: WO-2026-0831, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0831",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0831 on 2026-03-15: Mechanical seal replacement. Findings: Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the date of the service and the work order number.",
+      "time_s": 73.62
+    },
+    {
+      "q": "Does SOP-MAINT-047 comply with OISD-116 section 5.3.2?",
+      "truth": "Partial compliance \u2014 Step 1 says 'Issue PTW' but does not specify that a qualified safety officer (minimum Grade-B HSE) must sign it",
+      "category": "COMPLIANCE_CHECK",
+      "id": "Q002",
+      "answer": " To determine if SOP-MAINT-047 complies with OISD-116 Section 5.3.2, we need to compare the requirements stated in both documents for permit issuance during rotating equipment maintenance.\n\n[Doc: OISD-116-S5.3.2, Page 1] states that a permit to work must be issued and signed by a qualified safety officer (minimum Grade-B HSE) before any maintenance on rotating equipment. The permit shall record isolation status, depressurisation verification, and electrical isolation.\n\n[Doc: SOP-MAINT-047] is not provided in the context, so I cannot directly compare it with OISD-116 Section 5.3.2. However, based on the general nature of the document names (SOP for maintenance), it can be assumed that SOP-MAINT-047 may contain procedures related to rotating equipment maintenance. To ensure compliance with OISD-116 Section 5.3.2, I recommend reviewing SOP-MAINT-047 and verifying if it includes the following elements:\n\n1. Issuance of a permit signed by a qualified safety officer (minimum Grade-B HSE)\n2. Recording of isolation status, depressurisation verification, and electrical isolation in the permit\n\nThis information is not in my indexed documents. Please consult the relevant engineer for more details on SOP-MAINT-047. Verify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "OISD-116-S5.3.2",
+          "page": 1,
+          "excerpt": "OISD-116 Section 5.3.2 \u2014 Permit Requirements for Rotating Equipment Maintenance: A permit to work must be issued and signed by a qualified safety officer (minimum Grade-B HSE) before any maintenance o"
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer identifies that a permit to work must be issued and signed by a qualified safety officer (minimum Grade-B HSE), but it does not specify whether SOP-MAINT-047 complies with this requirement as the document itself is not provided.",
+      "time_s": 57.57
+    },
+    {
+      "q": "Which equipment has the same failure mode as P-101?",
+      "truth": "P-201 (2 mechanical seal failures 2025-2026, same seal spec SK-101-A); P-301 has none because it uses AESSEAL MG1",
+      "category": "CROSS_ENTITY_REASONING",
+      "id": "Q003",
+      "answer": " Based on the provided context, the failure mode of P-101 is a mechanical seal failure due to overdue maintenance and seal degradation accelerated by sustained high-temperature operation above 70\u00b0C. As per my indexed documents, I found no other equipment with the exact same failure mode. However, it's important to note that similar failure modes can occur in other equipment if they are subjected to similar operating conditions.\n\nFor instance, V-203 experienced a worn mechanical seal beyond tolerance and spring fatigue, which might be related to high temperatures as well [Doc: WO-2026-0831, Page 1]. But the root cause for V-203's failure is not explicitly mentioned in the context.\n\nThis information is not in my indexed documents. Please consult the relevant engineer or inspect the maintenance records of other equipment to confirm if they have the same failure mode as P-101.\n\nVerifying with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0831",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0831 on 2026-03-15: Mechanical seal replacement. Findings: Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks."
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The system's answer mentions P-201 having a mechanical seal failure, which is a key fact of the ground truth, but it does not explicitly state that P-201 has the same seal spec SK-101-A as P-101. It also provides information about V-203's worn mechanical seal, which might be related to high temperatures, but the connection to P-101's failure mode is not clear.",
+      "time_s": 42.8
+    },
+    {
+      "q": "Who are the experts on P-101 and when do they retire?",
+      "truth": "Ramesh Kumar (multiple seal WOs + capsule KC-2026-0012), retires 31-Mar-2029",
+      "category": "KNOWLEDGE_CLIFF",
+      "id": "Q004",
+      "answer": " The experts who know equipment P-101 are J.P. Sharma and S. Venkatesan. According to the provided context, J.P. Sharma retires on 2027-09-30 (in ~14 months), while S. Venkatesan retires on 2028-06-30 (in ~23 months). Verify with the designated safety officer before proceeding. [Doc: WORKFORCE-ANALYTICS, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WORKFORCE-ANALYTICS",
+          "page": 1,
+          "excerpt": "WORKFORCE KNOWLEDGE-CLIFF ANALYSIS (retiring within 3 years): 3 of 6 experts retiring soon; 3 equipment items are unpreserved (no recorded capsule); 40% of hands-on work-order history is held by retir"
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "The answer does not provide information about the expert who is an expert on P-101 and when they retire as per ground truth.",
+      "time_s": 35.99
+    },
+    {
+      "q": "What is the correct gas testing requirement before confined space entry?",
+      "truth": "Per SOP-CS-012 Section 6.2 and OISD-105 \u00a74.3: O2 19.5-23.5%, LEL <5%, H2S <10ppm, CO <25ppm; test not more than 30 minutes before entry; repeat after >15 minute interruption",
+      "category": "PROCEDURE_QUERY",
+      "id": "Q005",
+      "answer": " The correct gas testing requirement before confined space entry, as per OISD-105 Section 4.3 and SOP-CS-012 Section 6.2, is that gas testing for oxygen, flammables, and toxic gases should be conducted not more than 30 minutes prior to entry. If the entry is interrupted for more than 15 minutes, gas testing must be repeated before re-entry. The specific gas levels required are: Oxygen 19.5-23.5%, LEL below 5%, H2S below 10 ppm, CO below 25 ppm [Doc: OISD-105-S4.3, Page 1, Doc: SOP-CS-012, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "OISD-105-S4.3",
+          "page": 1,
+          "excerpt": "OISD-105 Section 4.3 \u2014 Gas Testing Before Vessel Entry: Entry into any confined space shall be permitted only after gas testing for oxygen, flammables and toxic gases. Gas testing shall be conducted n"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly states the required gas levels and the time frame for testing as per the ground truth",
+      "time_s": 42.06
+    },
+    {
+      "q": "Is FI-101 accurate?",
+      "truth": "No \u2014 it reads approximately 8% low due to orifice edge wear. Per Ramesh Kumar and S. Venkatesan (knowledge capsules) add 8% to readings; permanent fix is plate replacement at shutdown",
+      "category": "KNOWLEDGE_CAPSULE",
+      "id": "Q006",
+      "answer": " Based on the provided context, there is evidence that FI-101 may not be fully accurate. Expert knowledge capsule KC-2026-0014 from S. Venkatesan states that FI-101 drifts 7-8% low every ~6 months since 2021 due to orifice edge erosion [Doc: KC-2026-0014, Page 1]. Therefore, it is recommended to add 8% to its readings as a temporary fix until permanent replacement at the next shutdown [Doc: KC-2026-0012, Page 1]. Verify with the designated safety officer before proceeding.\n\n[Doc: KC-2026-0014, Page 1]\nExpert knowledge from S. Venkatesan (recorded 2026-06-25): FI-101 drifts 7-8% low every ~6 months since 2021 (orifice edge erosion); permanent fix requires plate replacement at shutdown \u2014 apply +8% correction until then. LT-401 impulse line chokes every monsoon; flush preventively in September-October.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "KC-2026-0012",
+          "page": 1,
+          "excerpt": "Expert knowledge capsule KC-2026-0012 from Ramesh Kumar: P-101 seal gives 10-15 days warning: slight bearing-housing vibration (~4 mm/s) plus faint suction whistling together mean imminent seal failur"
+        },
+        {
+          "doc_id": "KC-2026-0014",
+          "page": 1,
+          "excerpt": "Expert knowledge from S. Venkatesan (recorded 2026-06-25): FI-101 drifts 7-8% low every ~6 months since 2021 (orifice edge erosion); permanent fix requires plate replacement at shutdown \u2014 apply +8% co"
+        },
+        {
+          "doc_id": "KC-2026-0012",
+          "page": 1,
+          "excerpt": "Expert knowledge from Ramesh Kumar (recorded 2026-06-20): P-101 seal gives 10-15 days warning: slight bearing-housing vibration (~4 mm/s) plus faint suction whistling together mean imminent seal failu"
+        },
+        {
+          "doc_id": "KC-2026-0014",
+          "page": 1,
+          "excerpt": "Expert knowledge capsule KC-2026-0014 from S. Venkatesan: FI-101 drifts 7-8% low every ~6 months since 2021 (orifice edge erosion); permanent fix requires plate replacement at shutdown \u2014 apply +8% cor"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies that FI-101 may not be fully accurate, the cause of the inaccuracy (orifice edge erosion), and provides a temporary fix (adding 8% to readings) as well as a permanent one (plate replacement at shutdown). It also mentions the source of the information.",
+      "time_s": 61.6
+    },
+    {
+      "q": "What warning signs appear before a P-101 seal failure?",
+      "truth": "Slight bearing-housing vibration (~4 mm/s) plus faint whistling from suction side, appearing 10-15 days before failure (Ramesh Kumar capsule KC-2026-0012)",
+      "category": "KNOWLEDGE_CAPSULE",
+      "id": "Q007",
+      "answer": " Before a P-101 seal failure, there are two warning signs:\n\n1. A slight bearing-housing vibration that can be felt (gauge may read around 4 mm/s) [Knowledge Capsule recording transcript \u2014 Ramesh Kumar]\n2. Faint suction whistling [Knowledge Capsule KC-2026-0012 from Ramesh Kumar]\n\nIt is also recommended to check the suction strainer every morning before startup, as it may get clogged with sediment over time [Doc: WO-2025-0602]. Verify with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2025-0602",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 on 2025-11-20: Quarterly PM and suction strainer cleaning. Findings: Strainer 40% clogged with sediment. Cleaned. Recommend morning strainer check before startup."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies and paraphrases both warning signs of a P-101 seal failure as stated in the ground truth.",
+      "time_s": 36.73
+    },
+    {
+      "q": "Why do P-101 seals keep failing?",
+      "truth": "Sustained operation above 70\u00b0C with a seal spec marginal for thermal cycling; contributing: clogged suction strainer causing cavitation stress. Root cause per INC-2025-0047",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q008",
+      "answer": " Based on the provided context, it appears that the mechanical seals of Pump P-101 have been failing due to overdue maintenance and seal degradation accelerated by sustained high-temperature operation above 70\u00b0C [Doc: INC-HISTORY-UNIT3, Page 1]. Additionally, work orders WO-2024-0512, WO-2025-0119, and WO-2026-0831 show that the seals have been worn beyond tolerance, with spring fatigue observed in some cases [Doc: WO-HISTORY-UNIT3, Page 1, Doc: WO-2026-0831, Page 1].\n\nThe seal specification for Pump P-101 has also been identified as marginal for thermal cycling duty [Doc: INC-HISTORY-UNIT3, Page 1], which may contribute to the seals' failure. To address this issue, a review of the seal specification with the Original Equipment Manufacturer (OEM) has been initiated [Doc: INC-HISTORY-UNIT3, Page 1].\n\nIn light of these findings, it is recommended to verify with the designated safety officer before proceeding and consider implementing stricter maintenance schedules for Pump P-101, as well as reviewing the seal specifications in collaboration with the OEM.\n\n[Doc: INC-HISTORY-UNIT3, Page 1] [Doc: WO-HISTORY-UNIT3, Page 1] [Doc: WO-2026-0831, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "WO-2026-0831",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0831 on 2026-03-15: Mechanical seal replacement. Findings: Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks."
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the reasons for P-101 seals failing, including high temperature operation and seal degradation due to overdue maintenance. It also mentions the marginal seal specification for thermal cycling and the need for a review with the OEM, which aligns with the ground truth.",
+      "time_s": 69.4
+    },
+    {
+      "q": "What should be checked before starting P-101 in the morning?",
+      "truth": "Suction strainer (overnight sediment clogging) and V-201 level above 40% for NPSH, per SOP-SU-004 and Ramesh Kumar's capsule",
+      "category": "PROCEDURE_QUERY",
+      "id": "Q009",
+      "answer": " Before starting P-101 in the morning, the following checks should be performed:\n\n1. Confirm all blinds have been removed as per the blind list [Doc: SOP-SU-004, Page 1].\n2. Check the suction strainer differential pressure to ensure it is within acceptable limits. This information is important for maintaining adequate Net Positive Suction Head (NPSH) for P-101 [Doc: SOP-SU-004, Page 1]. The last maintenance of the suction strainer was on work order WO-2025-0602, and it was found to be 40% clogged with sediment. Therefore, a morning check before startup is recommended [Doc: WO-2025-0602, Page 1].\n3. Verify the V-201 drum level is above 40% to ensure adequate NPSH for P-101 [Doc: SOP-SU-004, Page 1].\n4. Before starting P-101 on minimum flow, listen for cavitation. If detected, check for an air pocket in the suction line via high-point vent [Doc: SOP-SU-004, Page 1].\n5. Establish C-401 reflux before introducing feed to the column [Doc: SOP-SU-004, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "SOP-SU-004",
+          "page": 1,
+          "excerpt": "BHARAT CHEMICALS LIMITED \u00e2\u20ac\u201d UNIT 3\nSOP-SU-004 Rev 3 | Effective: 20-Aug-2025\nUNIT 3 COLD START-UP PROCEDURE\nRegulatory Basis: OISD-117\n1. Confirm all blinds removed per blind list; PSVs in service (P"
+        },
+        {
+          "doc_id": "WO-2025-0602",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 on 2025-11-20: Quarterly PM and suction strainer cleaning. Findings: Strainer 40% clogged with sediment. Cleaned. Recommend morning strainer check before startup."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains all key facts of the ground truth, including checking the suction strainer (overnight sediment clogging) and V-201 level above 40% for NPSH as per SOP-SU-004 and Ramesh Kumar's capsule.",
+      "time_s": 66.2
+    },
+    {
+      "q": "What was the near-miss in V-203 and what changed after it?",
+      "truth": "Dec-2024 (INC-2024-0089): gas detector alarmed at 8% LEL during entry; gas test was 45 min old. Gas test 30-min validity now strictly enforced and continuous monitoring mandatory for sludge-history vessels",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q010",
+      "answer": " The near-miss incident in V-203 involved a technician entering the knockout drum for inspection when a portable gas detector alarmed at 8% LEL (Lower Explosion Limit) inside the vessel. After this incident, changes were made to ensure safety measures are followed more strictly.\n\nAccording to the internal HSE audit report AUDIT-2025-INT-04, it was found that gas testing performed more than 30 minutes before entry, against OISD-105/SOP-CS-012 requirement, was the root cause of the near-miss. To address this issue, it is recommended to enforce re-entry gas testing and provide refresher training for attendants [Doc: AUDIT-2025-INT-04, Page 1].\n\nAdditionally, work order WO-2026-0301 was initiated on 2026-03-01 for an internal inspection (confined space entry), during which the demister pad partially collapsed and was replaced under a separate work order [Doc: WO-2026-0301, Page 1].\n\nVerify with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0301",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0301 on 2026-03-01: Internal inspection (confined space entry). Findings: Demister pad partially collapsed, replaced under separate WO."
+        },
+        {
+          "doc_id": "AUDIT-2025-INT-04",
+          "page": 1,
+          "excerpt": "BHARAT CHEMICALS LIMITED \u00e2\u20ac\u201d INTERNAL HSE AUDIT REPORT AUDIT-2025-INT-04\nDate: 18-Dec-2025 | Auditor: Kavita Rao (Grade-B HSE) | Scope: Unit 3 confined space entries\nFinding 1 (MAJOR): WO-2025-0610 (V"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains the key facts of the ground truth, including the details of the near-miss incident in V-203 and the changes made after it, such as enforcing re-entry gas testing and continuous monitoring for sludge-history vessels.",
+      "time_s": 55.16
+    },
+    {
+      "q": "What is the maximum heat-up rate for HE-303 and why?",
+      "truth": "25\u00b0C/hour per SOP-SU-004; fast heat-up caused tube-to-tubesheet leaks in 2019 and 2025 (J.P. Sharma capsule)",
+      "category": "KNOWLEDGE_CAPSULE",
+      "id": "Q011",
+      "answer": " The maximum heat-up rate for HE-303 reboiler is 25\u00b0C/hour. This recommendation is based on expert knowledge capsule KC-2026-0013 from J.P. Sharma, who mentioned that exceeding this rate could lead to tube-to-tubesheet joint leaks, as was observed in incidents in 2019 and 2025 [Doc: KC-2026-0013, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "KC-2026-0013",
+          "page": 1,
+          "excerpt": "Expert knowledge capsule KC-2026-0013 from J.P. Sharma: Never exceed 25\u00b0C/hour on HE-303 reboiler heat-up (tube joint leaks in 2019 and 2025 both from fast heat-up). Establish C-401 reflux before feed"
+        },
+        {
+          "doc_id": "KC-2026-0013",
+          "page": 1,
+          "excerpt": "Expert knowledge from J.P. Sharma (recorded 2026-06-22): Never exceed 25\u00b0C/hour on HE-303 reboiler heat-up (tube joint leaks in 2019 and 2025 both from fast heat-up). Establish C-401 reflux before fee"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The answer correctly states the maximum heat-up rate for HE-303 and provides the reason based on expert knowledge from J.P. Sharma's capsule, also mentioning the observed incidents in 2019 and 2025.",
+      "time_s": 43.58
+    },
+    {
+      "q": "How should a hydrocarbon leak from a pump seal be handled?",
+      "truth": "Per SOP-EM-001: raise alarm, switch to standby pump, isolate leaking pump, depressurise to flare, cordon 15m, eliminate ignition sources; leaks >10L logged as incident with RCA in 7 days",
+      "category": "PROCEDURE_QUERY",
+      "id": "Q012",
+      "answer": " To handle a hydrocarbon leak from a pump seal, follow the emergency response procedure for hydrocarbon leaks as outlined in SOP-EM-001 Rev 7 [Doc: BHARAT CHEMICALS LIMITED - UNIT 3, Page 1]. Here's a summary of the steps:\n\n1. Raise an alarm via the nearest manual call point and inform the shift supervisor on channel 1.\n2. Isolate the leak source remotely if safe (using remote-operated valves from the control room).\n3. Cordon the area with a minimum radius of 15 meters; eliminate ignition sources; deploy water curtains if vapour cloud is present.\n4. If the leak is from a pump seal, switch to the standby pump and isolate the leaking pump. Depressurize the casing to flare.\n5. The HSE officer performs a LEL (Lower Explosive Limit) survey before declaring the area safe.\n6. All leaks above 10 litres should be logged as an incident with root cause analysis within 7 days [Doc: OISD-141 Section 6.1, Page 1].\n\nVerify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains all key facts of the ground truth, including raising an alarm, switching to standby pump, isolating leaking pump, depressurizing to flare, cordoning 15m, eliminating ignition sources, and logging incidents above 10 litres for root cause analysis within 7 days.",
+      "time_s": 55.5
+    },
+    {
+      "q": "Which regulation governs PTW countersignature and what does it require?",
+      "truth": "OISD-116 \u00a75.3.2 (rotating equipment) and OISD-145 \u00a73.2: permits signed/countersigned by a qualified safety officer, minimum Grade-B HSE",
+      "category": "COMPLIANCE_CHECK",
+      "id": "Q013",
+      "answer": " The Permit to Work System Requirements outlined in OISD-145 Section 3.2 governs the PTW countersignature. According to this document, hot work and confined space entry permits shall be countersigned by a qualified safety officer [Doc: OISD-145-S3.2, Page 1]. However, it does not specify the grade of the HSE officer required for countersignature. For clarification on the Grade-B HSE countersignature requirement, you may refer to SOP-PTW-003 Rev 6 [Doc: SOP-PTW-003, Page 1] or consult with the designated safety officer. Verify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "OISD-145-S3.2",
+          "page": 1,
+          "excerpt": "OISD-145 Section 3.2 \u2014 Permit to Work System Requirements: A formal permit to work system shall govern all maintenance activities. Hot work and confined space entry permits shall be countersigned by a"
+        },
+        {
+          "doc_id": "SOP-PTW-003",
+          "page": 1,
+          "excerpt": "BHARAT CHEMICALS LIMITED \u00e2\u20ac\u201d UNIT 3\nSOP-PTW-003 Rev 6 | Effective: 01-Jan-2025\nPERMIT TO WORK SYSTEM\nRegulatory Basis: OISD-145\n1. Permit types: Cold Work, Hot Work, Confined Space Entry, Electrical, "
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer correctly identifies the regulation governing PTW countersignature (OISD-145 \u00a73.2) but does not mention OISD-116 \u00a75.3.2, which also applies to rotating equipment and requires a minimum Grade-B HSE officer for countersignature. The answer also does not explicitly state that the countersigned permits include hot work and confined space entry permits.",
+      "time_s": 41.0
+    },
+    {
+      "q": "What did the Feb-2026 internal audit find about SOP-MAINT-047?",
+      "truth": "AUDIT-2026-INT-01: 3 of 25 cold work permits not countersigned by HSE officer; SOP-MAINT-047 Step 1 doesn't specify signatory authority \u2014 recommends adding Grade-B HSE countersignature",
+      "category": "COMPLIANCE_CHECK",
+      "id": "Q014",
+      "answer": " The Feb-2026 internal audit found that SOP-MAINT-047 does not explicitly require a Grade-B HSE officer's countersignature, which creates ambiguity [Doc: AUDIT-2026-INT-01, Page 1]. It is recommended to revise the Standard Operating Procedure (SOP) to explicitly require a Grade-B HSE officer's countersignature [Doc: AUDIT-2026-INT-01, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "AUDIT-2026-INT-01",
+          "page": 1,
+          "excerpt": "BHARAT CHEMICALS LIMITED \u00e2\u20ac\u201d INTERNAL HSE AUDIT REPORT AUDIT-2026-INT-01\nDate: 20-Feb-2026 | Auditor: Kavita Rao (Grade-B HSE) | Scope: Unit 3 PTW system\nFinding 1 (MAJOR): 3 of 25 sampled cold work p"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system answer correctly identifies the findings of the Feb-2026 internal audit regarding SOP-MAINT-047 and its recommendation for adding a Grade-B HSE countersignature.",
+      "time_s": 35.35
+    },
+    {
+      "q": "What is P-101's maintenance interval and why was it changed?",
+      "truth": "90 days, reduced from 180 after the Jul-2025 seal failure incident INC-2025-0047",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q015",
+      "answer": " The maintenance interval for P-101 is 90 days. It was changed due to the incident INC-2025-0047 where the mechanical seal failed during operation, causing a hydrocarbon leakage. The root cause of this failure was overdue maintenance and seal degradation accelerated by sustained high-temperature operation above 70\u00b0C. [Doc: INC-HISTORY-UNIT3, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the maintenance interval for P-101 and provides the reason for the change, which is consistent with the ground truth.",
+      "time_s": 26.87
+    },
+    {
+      "q": "Which experts retire within 3 years and what knowledge is at risk?",
+      "truth": "J.P. Sharma (Sep-2027, startup/shutdown expertise, capsule KC-2026-0013 captured), S. Venkatesan (Jun-2028, instrumentation, KC-2026-0014), Ramesh Kumar (Mar-2029, rotating equipment, KC-2026-0012)",
+      "category": "KNOWLEDGE_CLIFF",
+      "id": "Q016",
+      "answer": " The experts who retire within 3 years are J.P. Sharma (in ~14 months) and S. Venkatesan (in ~23 months. The knowledge at risk includes:\n\n1. Startup/Shutdown Operations, Process Troubleshooting [J.P. Sharma] - recorded 1 knowledge capsule(s) [RETIRING SOON].\n2. Flow Metering, DCS, Calibration [S. Venkatesan] - recorded 1 knowledge capsule(s) [RETIRING SOON].\n3. P-201 seal failure warning signs and FI-101 correction for orifice edge wear [Ramesh Kumar] - verified spoken knowledge.\n4. FI-101 drifts 7-8% low every ~6 months since 2021 (orifice edge erosion) and LT-401 impulse line chokes every monsoon [S. Venkatesan] - recorded in expert knowledge capsule KC-2026-0014.\n\nVerify with the designated safety officer before proceeding to mitigate the risk of losing this valuable knowledge.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies J.P. Sharma and S. Venkatesan as experts retiring within 3 years, and lists the knowledge at risk associated with each expert.",
+      "time_s": 52.84
+    },
+    {
+      "q": "What happens if C-401 differential pressure crosses 0.4 bar during startup?",
+      "truth": "Indicates column flooding \u2014 reduce feed and wait, per J.P. Sharma's capsule KC-2026-0013",
+      "category": "KNOWLEDGE_CAPSULE",
+      "id": "Q017",
+      "answer": " According to the Cold Start-Up Procedure for Unit 3 [Doc: SOP-SU-004, Page 1], if the suction strainer differential pressure exceeds 0.3 bar, the suction strainer should be cleaned. However, the provided context does not specify what actions should be taken if the differential pressure crosses 0.4 bar during startup.\n\nThis information is not in my indexed documents. Please consult the relevant engineer or follow the standard procedure mentioned for differential pressure exceeding 0.3 bar. Verify with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "SOP-SU-004",
+          "page": 1,
+          "excerpt": "BHARAT CHEMICALS LIMITED \u00e2\u20ac\u201d UNIT 3\nSOP-SU-004 Rev 3 | Effective: 20-Aug-2025\nUNIT 3 COLD START-UP PROCEDURE\nRegulatory Basis: OISD-117\n1. Confirm all blinds removed per blind list; PSVs in service (P"
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer mentions the action to be taken when the suction strainer differential pressure exceeds 0.3 bar, but it does not directly address the question about what happens if the differential pressure crosses 0.4 bar during startup and the corrective action as per J.P. Sharma's capsule KC-2026-0013.",
+      "time_s": 34.25
+    },
+    {
+      "q": "Why did P-201 cause a feed interruption in January 2026?",
+      "truth": "INC-2026-0011: P-201 tripped on seal failure and standby didn't auto-start because selector switch was in manual; 40-minute interruption",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q018",
+      "answer": " The incident involving P-201 that caused a feed interruption on January 29, 2026, is not detailed in the provided context. However, based on the available information about P-201's history, it is possible that the pump tripped due to an issue with its seal [Doc: INC-HISTORY-UNIT3, Page 1]. For a precise explanation of the specific cause for the feed interruption in January 2026, I would recommend consulting the relevant incident report INC-2026-0011 or verifying with the designated safety officer. [Doc: INC-2026-0011]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "INC-2026-0011",
+          "page": 1,
+          "excerpt": "Incident INC-2026-0011 (2026-01-29): Unit 4 feed interruption for 40 minutes when P-201 tripped on seal failure and standby did not auto-start due to selector switch left in manual. Root cause: Seal f"
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer mentions P-201 tripping, which is a key fact, but it does not explicitly state the cause of the trip (seal failure) or the standby not auto-starting (selector switch was in manual). It also provides some context about the incident but does not directly address the specific feed interruption in January 2026.",
+      "time_s": 43.54
+    },
+    {
+      "q": "What is the vibration alert limit for pumps and where is it defined?",
+      "truth": "4.5 mm/s RMS alert (trip review 7.1 mm/s) per SOP-MAINT-012",
+      "category": "PROCEDURE_QUERY",
+      "id": "Q019",
+      "answer": " The vibration alert limit for pumps in Bharat Chemicals Limited Unit 3 is defined as 4.5 mm/s RMS [Doc: SOP-MAINT-012, Page 1].",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "SOP-MAINT-012",
+          "page": 1,
+          "excerpt": "BHARAT CHEMICALS LIMITED \u00e2\u20ac\u201d UNIT 3\nSOP-MAINT-012 Rev 5 | Effective: 02-Mar-2024\nROTATING EQUIPMENT PREVENTIVE MAINTENANCE (QUARTERLY / HALF-YEARLY)\nApplicable: All pumps Unit 3/4/5 | Risk Level: LOW "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The answer correctly states the vibration alert limit (4.5 mm/s RMS) and where it is defined (SOP-MAINT-012), although it does not mention the unit or the trip review value, but these details are not essential for a correct answer.",
+      "time_s": 20.92
+    },
+    {
+      "q": "What corrective action was recommended for the HE-303 tube leaks?",
+      "truth": "6 tubes plugged (WO-2025-0489); daily cooling water chloride monitoring; metallurgy upgrade study \u2014 chloride stress corrosion at tube-to-tubesheet joints",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q020",
+      "answer": " The corrective action recommended for the HE-303 tube leaks, as per work order WO-2025-0489 and incident INC-2025-0102 [Doc: INC-HISTORY-UNIT3, Page 1], was to plug the tubes with chloride stress corrosion suspected. Additionally, a metallurgy upgrade study was initiated. [Doc: INC-2025-0102, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-2025-0102",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 (2025-09-28): Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days until repair. Root cause: Chloride stress corrosion cracking a"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The answer correctly identifies the recommended corrective actions for the HE-303 tube leaks, including plugging the tubes and initiating a metallurgy upgrade study. It also mentions chloride stress corrosion which is present in the ground truth.",
+      "time_s": 39.58
+    },
+    {
+      "q": "What work was done on P-101 on 2024-11-08?",
+      "truth": "Mechanical seal replacement after leak detected (WO-2024-0512), technician Ramesh Kumar. Findings: Seal face worn beyond tolerance. Operating temp logged >70\u00b0C during preceding week.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q021",
+      "answer": " Based on the provided context, there is no record of any work being done on P-101 on 2024-11-08. The latest work order for P-101 mentioned in the documents is WO-2026-0831 on 2026-03-15 [Doc: WO-2026-0831, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0831",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0831 on 2026-03-15: Mechanical seal replacement. Findings: Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks."
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "The question asks for work done on P-101 on 2024-11-08, but the provided answer mentions a work order from 2026-03-15.",
+      "time_s": 29.71
+    },
+    {
+      "q": "Who performed work order WO-2024-0512 and what were the findings?",
+      "truth": "Ramesh Kumar; findings: Seal face worn beyond tolerance. Operating temp logged >70\u00b0C during preceding week.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q022",
+      "answer": " The information about work order WO-2024 is not in my indexed documents. Please consult the relevant engineer for that specific work order.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system did not provide the correct findings for work order WO-2024-0512.",
+      "time_s": 31.6
+    },
+    {
+      "q": "What work was done on P-101 on 2025-03-02?",
+      "truth": "Mechanical seal replacement \u2014 seal failure during night shift (WO-2025-0119), technician Ramesh Kumar. Findings: Spring fatigue observed on seal assembly. Slight shaft vibration noted before failure per operator log. High-temperature operation >70\u00b0C recorded.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q023",
+      "answer": " The provided context does not contain any information about work done on P-101 on 2025-03-02. This information is not in my indexed documents. Please consult the relevant engineer for more details.",
+      "confidence": "HIGH",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system's answer does not provide the correct information about the work done on P-101 on 2025-03-02 as per the ground truth.",
+      "time_s": 11.91
+    },
+    {
+      "q": "Who performed work order WO-2025-0119 and what were the findings?",
+      "truth": "Ramesh Kumar; findings: Spring fatigue observed on seal assembly. Slight shaft vibration noted before failure per operator log. High-temperature operation >70\u00b0C recorded.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q024",
+      "answer": " The work order WO-2025-0119 is not in my indexed documents. Please consult the relevant engineer for this information.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system's answer does not contain the key facts of the ground truth as it could not identify who performed the work order or the findings.",
+      "time_s": 13.23
+    },
+    {
+      "q": "What work was done on P-101 on 2025-07-24?",
+      "truth": "Seal replacement following INC-2025-0047 hydrocarbon leak (WO-2025-0388), technician Ramesh Kumar. Findings: Seal face worn beyond tolerance, spring fatigue observed. Suction strainer found partially clogged with sediment.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q025",
+      "answer": " On 2025-07-24, no specific work order is recorded for P-101 in the provided context. However, the closest incident to that date is INC-2025-0047 which occurred on 2025-07-22. In this incident, the mechanical seal of P-101 failed during operation causing a hydrocarbon leakage of approximately 40 liters in Bay 7. The pump was switched to standby P-102 as a corrective action, and the seal was replaced on a later work order WO-2025-0388 [Doc: INC-HISTORY-UNIT3, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer mentions the incident (INC-2025-0047) and the work order (WO-2025-0388) related to the seal replacement, but it does not specify that Ramesh Kumar was the technician who performed the work.",
+      "time_s": 38.62
+    },
+    {
+      "q": "Who performed work order WO-2025-0388 and what were the findings?",
+      "truth": "Ramesh Kumar; findings: Seal face worn beyond tolerance, spring fatigue observed. Suction strainer found partially clogged with sediment.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q026",
+      "answer": " The work order WO-2025-0388 was not found in the provided context. Please consult the relevant engineer for this information. [Doc: WO-HISTORY-UNIT3, Page 1] only contains records up to the given data.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "The answer does not contain the key facts of the ground truth as it could not identify who performed the work order or the findings.",
+      "time_s": 12.67
+    },
+    {
+      "q": "What work was done on P-101 on 2026-03-15?",
+      "truth": "Mechanical seal replacement (WO-2026-0831), technician Ramesh Kumar. Findings: Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q027",
+      "answer": " On 2026-03-15, mechanical seal replacement was performed on Pump P-101. This information is from the work order document WO-2026-0831 [Doc: WO-2026-0831, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0831",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0831 on 2026-03-15: Mechanical seal replacement. Findings: Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the work done (mechanical seal replacement) and the related work order document (WO-2026-0831).",
+      "time_s": 27.36
+    },
+    {
+      "q": "Who performed work order WO-2026-0831 and what were the findings?",
+      "truth": "Ramesh Kumar; findings: Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q028",
+      "answer": " The work order WO-2026-0831 is not present in the provided context. However, based on the pattern of the other work orders, it can be assumed that a technician performed this work order. To find out who performed it and its findings, I would need to access additional data or documents that are not currently available in the context provided.\n\n\"This information is not in my indexed documents. Please consult the relevant engineer.\"",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The answer does not contain the key facts of the ground truth: who performed work order WO-2026-0831 and what were the findings",
+      "time_s": 38.67
+    },
+    {
+      "q": "What work was done on P-101 on 2025-04-15?",
+      "truth": "Quarterly PM: alignment check, lubrication, vibration reading (WO-2025-0201), technician Sunil Yadav. Findings: Vibration 4.2 mm/s (alert limit 4.5). Slight increase vs last reading 3.1 mm/s.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q029",
+      "answer": " The work order that was performed on P-101 on 2025-04-15 is not found in the provided context. However, the closest date is 2025-03-15 when a mechanical seal replacement was done as part of incident INC-2025-0047 [Doc: INC-HISTORY-UNIT3, Page 1]. Verify with the designated safety officer before proceeding.\n\n[Doc: INC-HISTORY-UNIT3, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "The work order on 2025-04-15 was not about a mechanical seal replacement as stated, but an alignment check, lubrication, vibration reading, and technician Sunil Yadav. The findings also included a vibration reading of 4.2 mm/s (alert limit 4.5) and a slight increase vs last reading 3.1 mm/s.",
+      "time_s": 34.91
+    },
+    {
+      "q": "Who performed work order WO-2025-0201 and what were the findings?",
+      "truth": "Sunil Yadav; findings: Vibration 4.2 mm/s (alert limit 4.5). Slight increase vs last reading 3.1 mm/s.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q030",
+      "answer": " Work order WO-2025-0201 was performed by Arjun Mehta [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of this work order state that there were no abnormal hot spots in the thermography survey [Doc: WO-HISTORY-UNIT3, Page 1].",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "Arjun Mehta did not perform work order WO-2025-0201 and there were findings of vibration levels, not abnormal hot spots",
+      "time_s": 20.62
+    },
+    {
+      "q": "What work was done on P-101 on 2025-11-20?",
+      "truth": "Quarterly PM and suction strainer cleaning (WO-2025-0602), technician Sunil Yadav. Findings: Strainer 40% clogged with sediment. Cleaned. Recommend morning strainer check before startup.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q031",
+      "answer": " The work order WO-2025-0602 on 2025-11-20 involved quarterly preventive maintenance and suction strainer cleaning for equipment P-101. [Doc: WO-2025-0602, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2025-0602",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 on 2025-11-20: Quarterly PM and suction strainer cleaning. Findings: Strainer 40% clogged with sediment. Cleaned. Recommend morning strainer check before startup."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the work order (WO-2025-0602) and the type of work done (quarterly PM and suction strainer cleaning) on P-101 on 2025-11-20. It also mentions the document source (Doc: WO-2025-0602, Page 1).",
+      "time_s": 26.05
+    },
+    {
+      "q": "Who performed work order WO-2025-0602 and what were the findings?",
+      "truth": "Sunil Yadav; findings: Strainer 40% clogged with sediment. Cleaned. Recommend morning strainer check before startup.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q032",
+      "answer": " The work order WO-2025-0602 is not present in the provided context. However, based on the pattern of the work orders, it can be assumed that this work order might not exist or is not indexed in the documents provided.\n\nTo find out who performed work order WO-2025-0602 and its findings, please consult the relevant engineer or check the corresponding document if available.\n\nVerifying with the designated safety officer before proceeding is always recommended for safety-critical queries.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The answer does not contain the key facts of the ground truth: who performed work order WO-2025-0602 and what were the findings.",
+      "time_s": 21.37
+    },
+    {
+      "q": "What work was done on P-201 on 2025-06-11?",
+      "truth": "Mechanical seal replacement (WO-2025-0290), technician Ramesh Kumar. Findings: Seal face wear similar to P-101 pattern. Same seal specification.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q033",
+      "answer": " The provided context does not contain information about any work order or incident involving P-201 on 2025-06-11.\n\nThis information is not in my indexed documents. Please consult the relevant engineer for details regarding work done on P-201 on that date.",
+      "confidence": "HIGH",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system's answer does not provide the key fact of the ground truth which is the work done (mechanical seal replacement) on P-201 on 2025-06-11.",
+      "time_s": 28.2
+    },
+    {
+      "q": "Who performed work order WO-2025-0290 and what were the findings?",
+      "truth": "Ramesh Kumar; findings: Seal face wear similar to P-101 pattern. Same seal specification.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q034",
+      "answer": " The information about work order WO-2025-0290 is not in my indexed documents. Please consult the relevant engineer for details.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system did not provide the correct performer or findings for work order WO-2025-0290",
+      "time_s": 10.68
+    },
+    {
+      "q": "What work was done on P-201 on 2026-01-28?",
+      "truth": "Seal leak \u2014 replaced mechanical seal (WO-2026-0114), technician Arjun Mehta. Findings: Spring fatigue on seal assembly. Second failure in 8 months on this tag.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q035",
+      "answer": " On 2026-01-28, a work order WO-2026-0114 was executed on P-201. The work involved replacing the mechanical seal [Doc: WO-2026-0114, Page 1]. This information is based on the provided context.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0114",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0114 on 2026-01-28: Seal leak \u2014 replaced mechanical seal. Findings: Spring fatigue on seal assembly. Second failure in 8 months on this tag."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the work order executed on P-201 and the type of work done (replacing the mechanical seal). It also provides a reference to the document for further details.",
+      "time_s": 26.94
+    },
+    {
+      "q": "Who performed work order WO-2026-0114 and what were the findings?",
+      "truth": "Arjun Mehta; findings: Spring fatigue on seal assembly. Second failure in 8 months on this tag.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q036",
+      "answer": " The work order WO-2026-0114 was performed by Arjun Mehta [Doc: WO-HISTORY-UNIT3, Page 1]. Unfortunately, the findings for this work order are not provided in the given context. This information is not in my indexed documents. Please consult the relevant engineer.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "Arjun Mehta was correct but the system did not provide the findings of the work order WO-2026-0114",
+      "time_s": 32.64
+    },
+    {
+      "q": "What work was done on P-201 on 2026-02-10?",
+      "truth": "Half-yearly PM (WO-2026-0233), technician Sunil Yadav. Findings: Normal. Vibration 2.8 mm/s.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q037",
+      "answer": " On 2026-02-10, a half-yearly preventive maintenance (PM) was performed on P-201 [Doc: WO-2026-0233]. The findings were normal with vibration at 2.8 mm/s [Doc: WO-2026-0233, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0233",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0233 on 2026-02-10: Half-yearly PM. Findings: Normal. Vibration 2.8 mm/s."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the work done (half-yearly PM), the date it was performed, and the document containing the details. It also provides additional information about the findings and vibration level.",
+      "time_s": 31.64
+    },
+    {
+      "q": "Who performed work order WO-2026-0233 and what were the findings?",
+      "truth": "Sunil Yadav; findings: Normal. Vibration 2.8 mm/s.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q038",
+      "answer": " Work order WO-2026-0233 is not in my indexed documents. Please consult the relevant engineer for this information.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system did not provide the name of the person who performed the work order or the findings.",
+      "time_s": 25.53
+    },
+    {
+      "q": "What work was done on P-301 on 2026-06-01?",
+      "truth": "Half-yearly PM (WO-2026-0501), technician Sunil Yadav. Findings: Normal. AESSEAL MG1 seal in excellent condition \u2014 no seal failure since 2018 installation.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q039",
+      "answer": " On 2026-06-01, a half-yearly preventive maintenance (PM) was performed on equipment P-301. The findings were normal and the AESSEAL MG1 seal in excellent condition with no seal failure since its installation in 2018 [Doc: WO-2026-0501, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0501",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0501 on 2026-06-01: Half-yearly PM. Findings: Normal. AESSEAL MG1 seal in excellent condition \u2014 no seal failure since 2018 installation."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains all the key facts of the ground truth, including the correct date, type of work done, findings, and the condition of the AESSEAL MG1 seal.",
+      "time_s": 35.41
+    },
+    {
+      "q": "Who performed work order WO-2026-0501 and what were the findings?",
+      "truth": "Sunil Yadav; findings: Normal. AESSEAL MG1 seal in excellent condition \u2014 no seal failure since 2018 installation.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q040",
+      "answer": " The work order WO-2026-0501 was performed by a technician named S. Venkatesan [Doc: WO-HISTORY-UNIT3, Page 1]. Unfortunately, the findings for this work order are not provided in the given context. This information is not in my indexed documents. Please consult the relevant engineer for more details.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer provides the name of the person who performed the work order but not the findings as stated in the ground truth.",
+      "time_s": 33.4
+    },
+    {
+      "q": "What work was done on P-103 on 2026-01-18?",
+      "truth": "Half-yearly PM, coupling inspection (WO-2026-0087), technician Sunil Yadav. Findings: Coupling insert worn, replaced.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q041",
+      "answer": " On 2026-01-18, a half-yearly preventive maintenance (PM) was performed on equipment P-103. The PM included a coupling inspection [Doc: WO-2026-0087]. During this inspection, the coupling insert was found to be worn and replaced [Doc: WO-2026-0087].\n\nAdditionally, it is important to note that there was a near-miss incident involving V-203 on 2024-12-03. However, the work order related to this incident does not specify the exact date of the work done [Doc: INC-2024-0089].\n\nFor safety-critical queries, always verify with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0087",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 on 2026-01-18: Half-yearly PM, coupling inspection. Findings: Coupling insert worn, replaced."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the type of work (half-yearly PM), the document number for the work order (WO-2026-0087), and the findings of the inspection, including that the coupling insert was worn and replaced. It also mentions technician Sunil Yadav, although this is not explicitly stated in the ground truth.",
+      "time_s": 47.92
+    },
+    {
+      "q": "Who performed work order WO-2026-0087 and what were the findings?",
+      "truth": "Sunil Yadav; findings: Coupling insert worn, replaced.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q042",
+      "answer": " Work order WO-2026-0087 was performed by Sunil Yadav. The findings of this work order were that the coupling insert on equipment P-103 was worn and needed to be replaced [Doc: WO-HISTORY-UNIT3, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system correctly identified who performed work order WO-2026-0087 and also mentioned the findings of the work order",
+      "time_s": 31.71
+    },
+    {
+      "q": "What work was done on P-103 on 2025-09-03?",
+      "truth": "Cavitation noise investigation (WO-2025-0455), technician Ramesh Kumar. Findings: NPSH margin low at reduced drum level. Cavitation confirmed. Operations advised to maintain V-201 level above 40%.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q043",
+      "answer": " The provided context does not contain any information about work orders or incidents related to P-103 on 2025-09-03. This information is not in my indexed documents. Please consult the relevant engineer for more details.",
+      "confidence": "HIGH",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The answer does not provide the correct work done on P-103 on 2025-09-03 as stated in the ground truth.",
+      "time_s": 23.04
+    },
+    {
+      "q": "Who performed work order WO-2025-0455 and what were the findings?",
+      "truth": "Ramesh Kumar; findings: NPSH margin low at reduced drum level. Cavitation confirmed. Operations advised to maintain V-201 level above 40%.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q044",
+      "answer": " Work order WO-2025-0455 was performed by Ramesh Kumar [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of this work order were that cavitation was confirmed due to a low NPSH margin at reduced drum level and operations were advised to maintain V-201 level above 40% [Doc: WO-HISTORY-UNIT3, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies who performed the work order and what the findings were, including the key facts of the ground truth.",
+      "time_s": 41.11
+    },
+    {
+      "q": "What work was done on P-104 on 2026-04-25?",
+      "truth": "Annual PM (WO-2026-0402), technician Sunil Yadav. Findings: Normal.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q045",
+      "answer": " On 2026-04-25, there is no recorded work order for equipment P-104 in the provided context. [Doc: WO-HISTORY-UNIT3, Page 1] and [Doc: WO-HISTORY-UNIT3, Page 2] only contain work orders for other equipment in Unit 3. However, it is mentioned that P-104 was last maintained on this date according to the knowledge graph data. For more specific details about the maintenance performed on P-104, please consult the relevant engineer or check the maintenance records of P-104. [Doc: WO-HISTORY-UNIT3]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The system's answer mentions that P-104 was last maintained on 2026-04-25, which is correct, but it does not provide the type of work (Annual PM) or the technician (Sunil Yadav) who performed it.",
+      "time_s": 45.6
+    },
+    {
+      "q": "Who performed work order WO-2026-0402 and what were the findings?",
+      "truth": "Sunil Yadav; findings: Normal.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q046",
+      "answer": " Work order WO-2026-0402 was performed by Ramesh Kumar [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of this work order are not explicitly mentioned in the provided context. However, based on the pattern of other work orders, it could be a preventive maintenance task or an investigation related to equipment K-101. To get specific details about the findings, please consult the relevant engineer. [Doc: WO-HISTORY-UNIT3, Page 1]",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer provides the correct performer of work order WO-2026-0402 but not the findings which are stated as 'Normal' in ground truth.",
+      "time_s": 38.16
+    },
+    {
+      "q": "What work was done on P-102 on 2026-05-02?",
+      "truth": "Standby pump changeover run and PM (WO-2026-0410), technician Sunil Yadav. Findings: Ran normally for 8 hours on changeover.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q047",
+      "answer": " On 2026-05-02, a standby changeover run and preventive maintenance were performed on Pump P-102. [Doc: WO-2026-0410, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0410",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0410 on 2026-05-02: Standby pump changeover run and PM. Findings: Ran normally for 8 hours on changeover."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the work done (standby changeover run and preventive maintenance) and provides the correct document reference (WO-2026-0410). It also mentions that technician Sunil Yadav was involved, although this is not explicitly stated in the ground truth.",
+      "time_s": 28.63
+    },
+    {
+      "q": "Who performed work order WO-2026-0410 and what were the findings?",
+      "truth": "Sunil Yadav; findings: Ran normally for 8 hours on changeover.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q048",
+      "answer": " Work order WO-2026-0410 was performed by Ramesh Kumar [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of this work order are not specified in the provided context. To get more information, you can consult the relevant engineer or check the work order details.\n\n[Doc: WO-HISTORY-UNIT3, Page 1]\nWork order WO-2026-0410 dated 2026-04-25 (PREVENTIVE) on equipment K-101: Information not found in the provided context. Please consult the relevant engineer for more details.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer provides the correct work order number and date, but it does not contain the name of the person who performed the work or the findings.",
+      "time_s": 34.41
+    },
+    {
+      "q": "What work was done on HE-301 on 2025-11-20?",
+      "truth": "Annual cleaning and eddy current tube inspection (WO-2025-0570), technician Arjun Mehta. Findings: Fouling on tube side reduced heat transfer ~12%. 3 tubes plugged (of 400) due to thinning.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q049",
+      "answer": " On 2025-11-20, a preventive maintenance work order WO-2025-0570 was executed on equipment HE-301. The work involved annual cleaning and eddy current tube inspection. [Doc: WO-HISTORY-UNIT3]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the work order (WO-2025-0570) executed on HE-301, and the type of work performed (annual cleaning and eddy current tube inspection).",
+      "time_s": 28.2
+    },
+    {
+      "q": "Who performed work order WO-2025-0570 and what were the findings?",
+      "truth": "Arjun Mehta; findings: Fouling on tube side reduced heat transfer ~12%. 3 tubes plugged (of 400) due to thinning.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q050",
+      "answer": " The information about work order WO-2025-0570 is not in my indexed documents. Please consult the relevant engineer for details.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system did not provide any of the key facts from the ground truth",
+      "time_s": 13.29
+    },
+    {
+      "q": "What work was done on HE-302 on 2026-02-14?",
+      "truth": "Annual cleaning (WO-2026-0140), technician Arjun Mehta. Findings: Light fouling. Cleaned.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q051",
+      "answer": " On 2026-02-14, preventive maintenance in the form of annual cleaning was performed on equipment HE-302. The technician who carried out this work was Arjun Mehta. The time taken for the maintenance was 16.0 hours. Parts used were Gasket Set GS-T15 and the cost was INR 95,000. The findings were light fouling which was cleaned following the procedure specified in SOP-MAINT-055 [Doc: SOP-MAINT-055, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "SOP-MAINT-055",
+          "page": 1,
+          "excerpt": "BHARAT CHEMICALS LIMITED \u00e2\u20ac\u201d UNIT 3\nSOP-MAINT-055 Rev 2 | Effective: 05-Apr-2024\nSHELL AND TUBE HEAT EXCHANGER CLEANING AND INSPECTION\nApplicable: HE-301, HE-302, HE-303 | Regulatory Basis: OISD-116 S"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains all the key facts of the ground truth, including the work done (annual cleaning), the date it was performed (2026-02-14), the technician who did it (Arjun Mehta), and the findings (light fouling).",
+      "time_s": 41.84
+    },
+    {
+      "q": "Who performed work order WO-2026-0140 and what were the findings?",
+      "truth": "Arjun Mehta; findings: Light fouling. Cleaned.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q052",
+      "answer": " Work order WO-2026-0140 was performed by Arjun Mehta [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of this work order were \"Light fouling\" [Doc: WO-HISTORY-UNIT3, Page 1].",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the person who performed the work order and the findings.",
+      "time_s": 34.46
+    },
+    {
+      "q": "What work was done on HE-303 on 2025-09-30?",
+      "truth": "Reboiler tube leak repair (WO-2025-0489), technician Arjun Mehta. Findings: 6 tubes leaking due to corrosion at tube-to-tubesheet joint. Plugged. Recommend metallurgy review \u2014 chloride stress corrosion suspected.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q053",
+      "answer": " On 2025-09-30, the work order WO-2025-0489 was executed on equipment HE-303. The work involved repairing a reboiler tube leak due to corrosion at the tube-to-tubesheet joint [Doc: WO-2025-0489, Page 1]. This information is also documented in the incident report INC-2025-0102 related to the same event [Doc: INC-HISTORY-UNIT3, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2025-0489",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0489 on 2025-09-30: Reboiler tube leak repair. Findings: 6 tubes leaking due to corrosion at tube-to-tubesheet joint. Plugged. Recommend metallurgy review \u2014 chloride stress corrosio"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the work order (WO-2025-0489) executed on equipment HE-303 for repairing a reboiler tube leak. It also mentions the cause of the leak as corrosion at the tube-to-tubesheet joint, which is consistent with the ground truth.",
+      "time_s": 38.77
+    },
+    {
+      "q": "Who performed work order WO-2025-0489 and what were the findings?",
+      "truth": "Arjun Mehta; findings: 6 tubes leaking due to corrosion at tube-to-tubesheet joint. Plugged. Recommend metallurgy review \u2014 chloride stress corrosion suspected.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q054",
+      "answer": " Work order WO-2025-0489 was performed by Arjun Mehta. The findings of this work order were that 6 tubes were leaking due to corrosion at the tube-to-tubesheet joint [Doc: WO-HISTORY-UNIT3, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system correctly identified who performed work order WO-2025-0489 and what were the findings.",
+      "time_s": 34.09
+    },
+    {
+      "q": "What work was done on V-201 on 2025-12-05?",
+      "truth": "Statutory internal inspection (confined space entry) (WO-2025-0610), technician Arjun Mehta. Findings: Internal inspection satisfactory. Minor pitting <0.5mm on bottom shell. Gas testing performed 25 min before entry \u2014 flagged by HSE as exceeding 30-min validity window during audit.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q055",
+      "answer": " On 2025-12-05, a statutory internal inspection (confined space entry) was performed on equipment V-201. The findings of the inspection were satisfactory, but gas testing performed 25 minutes before entry exceeded the 30-minute validity window during an audit [Doc: WO-2025-0610].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2025-0610",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0610 on 2025-12-05: Statutory internal inspection (confined space entry). Findings: Internal inspection satisfactory. Minor pitting <0.5mm on bottom shell. Gas testing performed 25 "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the type of work done, the date, and the document number. It also mentions the satisfactory findings of the inspection and the issue with gas testing validity window.",
+      "time_s": 30.92
+    },
+    {
+      "q": "Who performed work order WO-2025-0610 and what were the findings?",
+      "truth": "Arjun Mehta; findings: Internal inspection satisfactory. Minor pitting <0.5mm on bottom shell. Gas testing performed 25 min before entry \u2014 flagged by HSE as exceeding 30-min validity window during audit.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q056",
+      "answer": " Work order WO-2025-0610 was performed by technician Ramesh Kumar [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of this work order are not specified in the provided context. To get more details, you can refer to the actual work order document or consult with the relevant engineer.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer provides the performer of the work order correctly but does not mention the findings as stated in the ground truth.",
+      "time_s": 34.88
+    },
+    {
+      "q": "What work was done on V-202 on 2025-12-05?",
+      "truth": "Statutory internal inspection (confined space entry) (WO-2025-0611), technician Arjun Mehta. Findings: Satisfactory.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q057",
+      "answer": " On 2025-12-05, a pop test (bench) was conducted on Pressure Vessel V-202 as part of Work Order WO-2026-0130. The set pressure was verified to be 12 bar [Doc: WO-2026-0130, Page 1]. No other work related to V-202 is found in the provided context for that specific date. [Doc: INC-HISTORY-UNIT3, Page 1; WO-HISTORY-UNIT3, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "WO-2026-0130",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0130 on 2026-02-03: PSV-202A pop test (bench). Findings: Set pressure verified 12 bar."
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "The ground truth mentions a statutory internal inspection (confined space entry) on V-202, but the system's answer only mentions a pop test (bench) conducted for Work Order WO-2026-0130. The findings and the person involved are also not mentioned.",
+      "time_s": 40.87
+    },
+    {
+      "q": "Who performed work order WO-2025-0611 and what were the findings?",
+      "truth": "Arjun Mehta; findings: Satisfactory.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q058",
+      "answer": " The work order WO-2025-0611 is not in my indexed documents. Please consult the relevant engineer for more information.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system's answer does not contain the key facts of the ground truth as it could not identify who performed the work order or its findings.",
+      "time_s": 13.01
+    },
+    {
+      "q": "What work was done on V-203 on 2026-03-01?",
+      "truth": "Internal inspection (confined space entry) (WO-2026-0301), technician Sunil Yadav. Findings: Demister pad partially collapsed, replaced under separate WO.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q059",
+      "answer": " On 2026-03-01, internal inspection (confined space entry) was performed on equipment V-203. The findings of the inspection revealed that the demister pad was partially collapsed and it was replaced under a separate work order [Doc: WO-2026-0301, Page 1]. The last maintenance performed on V-203 before this incident was also on 2026-03-01 as per the provided context [Doc: WO-HISTORY-UNIT3, Page 1].\n\nFor more detailed information about V-203's specifications and history, you can refer to the knowledge graph data: {\"V-203\": ...}",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0301",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0301 on 2026-03-01: Internal inspection (confined space entry). Findings: Demister pad partially collapsed, replaced under separate WO."
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system answer contains all key facts of the ground truth, including the correct date, work order number, type of work done (internal inspection), and the issue found (demister pad partially collapsed). It also provides additional context about a separate work order for replacement.",
+      "time_s": 41.57
+    },
+    {
+      "q": "Who performed work order WO-2026-0301 and what were the findings?",
+      "truth": "Sunil Yadav; findings: Demister pad partially collapsed, replaced under separate WO.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q060",
+      "answer": " The work order WO-2026-0301 was performed by a technician named S. Venkatesan [Doc: WO-HISTORY-UNIT3, Page 1]. However, the provided context does not contain information about the findings for this work order. This information is not in my indexed documents. Please consult the relevant engineer for more details.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "The answer does not match the ground truth as it mentions a different technician and does not provide the correct findings",
+      "time_s": 35.37
+    },
+    {
+      "q": "What work was done on C-401 on 2025-10-15?",
+      "truth": "Column internals inspection during shutdown (WO-2025-0520), technician Arjun Mehta. Findings: Trays 12-15 valve wear, replaced. Downcomer clearances OK.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q061",
+      "answer": " On 2025-10-15, a column internals inspection was conducted on equipment C-401 during a shutdown. The findings indicated that trays 12-15 had valve wear, which were replaced [Doc: WO-2025-0520].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2025-0520",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0520 on 2025-10-15: Column internals inspection during shutdown. Findings: Trays 12-15 valve wear, replaced. Downcomer clearances OK."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The answer correctly identifies the type of work done (column internals inspection), the date it was performed (2025-10-15), and provides the correct document reference (WO-2025-0520). It also mentions the valve wear issue in trays 12-15, which is a key fact from the ground truth.",
+      "time_s": 29.24
+    },
+    {
+      "q": "Who performed work order WO-2025-0520 and what were the findings?",
+      "truth": "Arjun Mehta; findings: Trays 12-15 valve wear, replaced. Downcomer clearances OK.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q062",
+      "answer": " The information about work order WO-2025-0520 is not in my indexed documents. Please consult the relevant engineer for details.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The answer does not contain the key facts of the ground truth as it could not provide the performer or findings of work order WO-2025-0520",
+      "time_s": 25.88
+    },
+    {
+      "q": "What work was done on K-101 on 2026-04-10?",
+      "truth": "6-monthly PM: valve inspection, rod drop check (WO-2026-0350), technician Ramesh Kumar. Findings: 2nd stage suction valve plates worn, replaced. Rod drop within limits.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q063",
+      "answer": " On 2026-04-10, work order WO-2026-0350 was executed on equipment K-101. The work involved a 6-monthly preventive maintenance (PM) with valve inspection and rod drop check [Doc: WO-HISTORY-UNIT3, Page 1]. During this PM, the 2nd stage suction valve plates were found worn and replaced. Rod drop was within limits [Doc: WO-2026-0350, Page 1]. The procedure followed was SOP-MAINT-062.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-2026-0350",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 on 2026-04-10: 6-monthly PM: valve inspection, rod drop check. Findings: 2nd stage suction valve plates worn, replaced. Rod drop within limits."
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the work order, the equipment, the type of maintenance, and the findings of the work done on K-101 on 2026-04-10.",
+      "time_s": 48.64
+    },
+    {
+      "q": "Who performed work order WO-2026-0350 and what were the findings?",
+      "truth": "Ramesh Kumar; findings: 2nd stage suction valve plates worn, replaced. Rod drop within limits.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q064",
+      "answer": " Work order WO-2026-0350 was performed by Ramesh Kumar [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of this work order were that the 2nd stage suction valve plates were worn and needed to be replaced [Doc: WO-HISTORY-UNIT3, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The answer correctly identifies who performed the work order and what the findings were.",
+      "time_s": 22.36
+    },
+    {
+      "q": "What work was done on K-101 on 2025-07-02?",
+      "truth": "High discharge temperature alarm investigation (WO-2025-0333), technician Ramesh Kumar. Findings: 3rd stage discharge valve leaking causing recompression heating. Replaced.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q065",
+      "answer": " On 2025-07-02, a corrective maintenance work order WO-2025-0333 was initiated on equipment K-101. The work involved investigating a high discharge temperature alarm [Doc: WO-HISTORY-UNIT3, Page 1]. The technician who carried out the work was Ramesh Kumar. The parts used were Valve Plate Kit VP-HHE and the cost of the work was INR 52000. The findings revealed that the 3rd stage discharge valve was leaking, causing recompression heating. The leaking valve was replaced [Doc: WO-HISTORY-UNIT3, Page 1]. The procedure followed was SOP-MAINT-062.\n\n[Citation: Doc: WO-HISTORY-UNIT3, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains all the key facts of the ground truth, including the work done (investigation of high discharge temperature alarm), the equipment involved (K-101), the technician who performed the work (Ramesh Kumar), and the issue found and fixed (3rd stage discharge valve leaking causing recompression heating and its replacement).",
+      "time_s": 33.29
+    },
+    {
+      "q": "Who performed work order WO-2025-0333 and what were the findings?",
+      "truth": "Ramesh Kumar; findings: 3rd stage discharge valve leaking causing recompression heating. Replaced.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q066",
+      "answer": " Work order WO-2025-0333 was performed by Ramesh Kumar. The findings were that there was a high discharge temperature alarm due to leakage in the 3rd stage discharge valve of equipment K-101, causing recompression heating. [Doc: WO-HISTORY-UNIT3, Page 1]",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies who performed work order WO-2025-0333 and the cause of the issue (leaking 3rd stage discharge valve). However, it misses the specific finding that the leak was causing recompression heating and the part replacement.",
+      "time_s": 23.11
+    },
+    {
+      "q": "What work was done on FI-101 on 2024-08-20?",
+      "truth": "Flow meter calibration (WO-2024-0450), technician S. Venkatesan. Findings: Calibrated against master meter. NOTE: as-found error -7.8% (reading low). As-left within \u00b10.5%. Recommend orifice plate inspection at next shutdown \u2014 edge wear suspected, drift likely to recur.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q067",
+      "answer": " On 2024-08-20, a work order WO-2024-0450 was executed on FI-101. The work order involved calibration of the flow meter [Doc: WO-2024-0450, Page 1]. The findings of this work order indicated an as-found error of -7.8% (reading low). However, by the time it was left, the reading was within \u00b10.5%. Additionally, there was a recommendation for orifice plate inspection at the next shutdown due to suspected edge wear and a likely recurrence of the error [Doc: WO-2024-0450, Page 1].\n\nVerifying with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2024-0450",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0450 on 2024-08-20: Flow meter calibration. Findings: Calibrated against master meter. NOTE: as-found error -7.8% (reading low). As-left within \u00b10.5%. Recommend orifice plate inspec"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains all key facts from the ground truth including the work order number (WO-2024-0450), the work done (flow meter calibration), the technician who performed it (S. Venkatesan), and the findings of the calibration (as-found error -7.8%, as-left within \u00b10.5%, recommendation for orifice plate inspection).",
+      "time_s": 44.6
+    },
+    {
+      "q": "Who performed work order WO-2024-0450 and what were the findings?",
+      "truth": "S. Venkatesan; findings: Calibrated against master meter. NOTE: as-found error -7.8% (reading low). As-left within \u00b10.5%. Recommend orifice plate inspection at next shutdown \u2014 edge wear suspected, drift likely to recur.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q068",
+      "answer": " The information about work order WO-2024-0450 is not in my indexed documents. Please consult the relevant engineer for that specific work order.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The answer does not contain the key facts of the ground truth, as it does not provide who performed the work order or the findings.",
+      "time_s": 26.29
+    },
+    {
+      "q": "What work was done on V-201 on 2026-02-03?",
+      "truth": "PSV-201A pop test (bench) (WO-2026-0129), technician S. Venkatesan. Findings: Set pressure verified 18 bar. Certified for 1 year.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q069",
+      "answer": " On 2026-02-03, a pop test (bench) was conducted for PSV-201A, which is a part of equipment V-201. The set pressure was verified to be 18 bar and it was certified for 1 year. [Doc: WO-2026-0129, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0129",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0129 on 2026-02-03: PSV-201A pop test (bench). Findings: Set pressure verified 18 bar. Certified for 1 year."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains all the key facts of the ground truth, including the work done (pop test), the equipment involved (PSV-201A), the date it was done (2026-02-03), and additional details such as the set pressure and certification duration.",
+      "time_s": 32.54
+    },
+    {
+      "q": "Who performed work order WO-2026-0129 and what were the findings?",
+      "truth": "S. Venkatesan; findings: Set pressure verified 18 bar. Certified for 1 year.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q070",
+      "answer": " The work order WO-2026-0129 is not present in the provided context. This information is not in my indexed documents. Please consult the relevant engineer for more details.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system did not provide the correct performer or findings for work order WO-2026-0129",
+      "time_s": 12.82
+    },
+    {
+      "q": "What work was done on V-202 on 2026-02-03?",
+      "truth": "PSV-202A pop test (bench) (WO-2026-0130), technician S. Venkatesan. Findings: Set pressure verified 12 bar.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q071",
+      "answer": " On 2026-02-03, a pop test (bench) was conducted on Pressure Vessel V-202. The set pressure was verified to be 12 bar. [Doc: WO-2026-0130, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0130",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0130 on 2026-02-03: PSV-202A pop test (bench). Findings: Set pressure verified 12 bar."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the type of test (pop test), the vessel involved (V-202), and the date of the event. It also mentions the set pressure which is a key fact from the ground truth.",
+      "time_s": 26.36
+    },
+    {
+      "q": "Who performed work order WO-2026-0130 and what were the findings?",
+      "truth": "S. Venkatesan; findings: Set pressure verified 12 bar.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q072",
+      "answer": " The work order WO-2026-0130 was performed by Arjun Mehta [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of this work order are not specified in the provided context. To get more details, you can consult the relevant engineer or check the work order document for further information.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The system correctly identified who performed the work order but did not provide the correct findings.",
+      "time_s": 17.15
+    },
+    {
+      "q": "What work was done on C-401 on 2025-10-01?",
+      "truth": "Level transmitter LT-401 erratic reading (WO-2025-0499), technician S. Venkatesan. Findings: Impulse line choked. Flushed line and restored.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q073",
+      "answer": " On 2025-10-01, work order WO-2025-0499 was carried out on equipment C-401. The work involved correcting an erratic reading of the level transmitter LT-401. The impulse line was found to be choked and was flushed and restored following the procedure SOP-INST-021 [Doc: WO-HISTORY-UNIT3, Page 1]. The work took 2.5 hours and cost INR 9500 for parts used, specifically an Impulse Line Kit [Doc: WO-HISTORY-UNIT3, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The answer correctly identifies the work order (WO-2025-0499) and the equipment (C-401), and it also mentions the issue with the level transmitter LT-401, which is a key fact from the ground truth. It also provides details about the impulse line problem and the corrective actions taken.",
+      "time_s": 43.58
+    },
+    {
+      "q": "Who performed work order WO-2025-0499 and what were the findings?",
+      "truth": "S. Venkatesan; findings: Impulse line choked. Flushed line and restored.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q074",
+      "answer": " Work order WO-2025-0499 was performed by technician S. Venkatesan [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of the work order were that the impulse line of equipment C-401 was choked and needed to be flushed and restored [Doc: WO-HISTORY-UNIT3, Page 1].",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies who performed work order WO-2025-0499 (S. Venkatesan) and what the findings were (impulse line choked, flushed line and restored).",
+      "time_s": 35.05
+    },
+    {
+      "q": "What work was done on HE-301 on 2026-02-20?",
+      "truth": "Thermography survey (WO-2026-0201), technician Arjun Mehta. Findings: No abnormal hot spots.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q075",
+      "answer": " On 2026-02-20, a thermography survey was conducted on equipment HE-301. No abnormal hot spots were found during the survey [Doc: WO-2026-0201, Page 1]. The procedure followed for this work order was SOP-MAINT-055. [Doc: WO-2026-0201, Page 1]",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0201",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0201 on 2026-02-20: Thermography survey. Findings: No abnormal hot spots."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the type of work done (thermography survey) and the date it was performed on HE-301. It also mentions that no abnormal hot spots were found, which is a key fact from the ground truth.",
+      "time_s": 34.86
+    },
+    {
+      "q": "Who performed work order WO-2026-0201 and what were the findings?",
+      "truth": "Arjun Mehta; findings: No abnormal hot spots.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q076",
+      "answer": " Work order WO-2026-0201 was performed by Arjun Mehta. The findings of this work order were that there were no abnormal hot spots during the thermography survey [Doc: WO-HISTORY-UNIT3, Page 1].",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system correctly identified who performed the work order and the findings.",
+      "time_s": 30.17
+    },
+    {
+      "q": "What work was done on P-103 on 2026-05-12?",
+      "truth": "Vibration route reading (WO-2026-0450), technician Sunil Yadav. Findings: 2.6 mm/s. Normal.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q077",
+      "answer": " On 2026-05-12, a vibration route reading was performed on equipment P-103. The findings of the reading were normal [Doc: WO-2026-0450, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0450",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0450 on 2026-05-12: Vibration route reading. Findings: 2.6 mm/s. Normal."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies that a vibration route reading was done and mentions the equipment P-103. It also provides the correct document reference (WO-2026-0450).",
+      "time_s": 25.55
+    },
+    {
+      "q": "Who performed work order WO-2026-0450 and what were the findings?",
+      "truth": "Sunil Yadav; findings: 2.6 mm/s. Normal.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q078",
+      "answer": " Work order WO-2026-0450 was performed by Sunil Yadav [Doc: WO-HISTORY-UNIT3, Page 1]. The findings of this work order are not specified in the provided context. To get more details, you can consult the relevant engineer or check the work order document for further information.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0087 dated 2026-01-18 (PREVENTIVE) on equipment P-103: Half-yearly PM, coupling inspection. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: Coupling Insert CI-08. Cost: "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2024-0512 dated 2024-11-08 (CORRECTIVE) on equipment P-101: Mechanical seal replacement after leak detected. Technician: Ramesh Kumar. Time taken: 5.0 hours. Parts used: Seal Kit SK-101-"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0602 dated 2025-11-20 (PREVENTIVE) on equipment P-101: Quarterly PM and suction strainer cleaning. Technician: Sunil Yadav. Time taken: 2.5 hours. Parts used: none. Cost: INR 2800. "
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The system correctly identified who performed the work order but did not provide the findings as stated in the ground truth.",
+      "time_s": 32.56
+    },
+    {
+      "q": "What work was done on K-101 on 2026-06-15?",
+      "truth": "Vibration and rod drop route reading (WO-2026-0521), technician Sunil Yadav. Findings: Normal.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q079",
+      "answer": " On 2026-06-15, a vibration and rod drop route reading was performed on equipment K-101. The findings were normal [Doc: WO-2026-0521, Page 1].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-2026-0521",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0521 on 2026-06-15: Vibration and rod drop route reading. Findings: Normal."
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the work done (vibration and rod drop route reading) on equipment K-101 on the specified date, and also mentions the technician who performed the work.",
+      "time_s": 14.52
+    },
+    {
+      "q": "Who performed work order WO-2026-0521 and what were the findings?",
+      "truth": "Sunil Yadav; findings: Normal.",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q080",
+      "answer": " The work order WO-2026-0521 is not present in the provided context. This information is not in my indexed documents. Please consult the relevant engineer for more details.",
+      "confidence": "MEDIUM",
+      "citations": [],
+      "grade": "WRONG",
+      "reason": "The system did not provide the correct performer or findings for work order WO-2026-0521",
+      "time_s": 14.26
+    },
+    {
+      "q": "What was the root cause of incident INC-2025-0047?",
+      "truth": "Overdue maintenance and seal degradation accelerated by sustained high-temperature operation above 70\u00b0C. Seal specification marginal for thermal cycling duty.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q081",
+      "answer": " The root cause of incident INC-2025-0047 was overdue maintenance and seal degradation accelerated by sustained high-temperature operation above 70\u00b0C. Seal specification for Pump P-101 was marginal for thermal cycling duty [Doc: INC-HISTORY-UNIT3, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the root cause of incident INC-2025-0047 as overdue maintenance and seal degradation accelerated by sustained high-temperature operation above 70\u00b0C, which aligns with the ground truth.",
+      "time_s": 29.26
+    },
+    {
+      "q": "What corrective action followed incident INC-2025-0047?",
+      "truth": "Seal replaced (WO-2025-0388). Preventive maintenance interval reduced from 180 to 90 days. Seal specification review with OEM initiated.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q082",
+      "answer": " The corrective action that followed incident INC-2025-0047 was the replacement of the mechanical seal in Pump P-101 (WO-2025-0388). Additionally, the preventive maintenance interval for the pump was reduced from 180 to 90 days. A review of the seal specification with the Original Equipment Manufacturer (OEM) was also initiated [Doc: INC-HISTORY-UNIT3, Page 1].",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains all the key facts from the ground truth, including the replacement of the seal, reduction in preventive maintenance interval, and initiation of a seal specification review with OEM.",
+      "time_s": 32.84
+    },
+    {
+      "q": "What was the root cause of incident INC-2024-0089?",
+      "truth": "Gas testing performed more than 30 minutes before entry, against OISD-105/SOP-CS-012 requirement. Residual hydrocarbon desorbed from sludge after initial test.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q083",
+      "answer": " The root cause of incident INC-2024-0089 is not explicitly mentioned in the provided context. However, based on the information from SOP-EM-001 and OISD-141, it can be inferred that the incident might have been due to a hydrocarbon leak, but the specific equipment or component involved is unknown. [Doc: SOP-EM-001, Page 1][Doc: OISD-141-S6.1, Page 1]\n\nFor more detailed information about this incident, please consult the relevant engineer or check the incident report documents if available.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "SOP-EM-001",
+          "page": 1,
+          "excerpt": "BHARAT CHEMICALS LIMITED \u00e2\u20ac\u201d UNIT 3\nSOP-EM-001 Rev 7 | Effective: 01-Nov-2025\nEMERGENCY RESPONSE \u00e2\u20ac\u201d HYDROCARBON LEAK\nRegulatory Basis: OISD-141, Factories Act 1948\n1. Raise alarm via nearest manual c"
+        },
+        {
+          "doc_id": "OISD-141-S6.1",
+          "page": 1,
+          "excerpt": "OISD-141 Section 6.1 \u2014 Leak Response and Ignition Control: Facilities shall have a documented emergency procedure for hydrocarbon leaks covering source isolation, area cordoning, ignition source elimi"
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The system's answer does not directly state the root cause of INC-2024-0089 as given in the ground truth, but it does infer that a hydrocarbon leak might have been involved which is partially correct.",
+      "time_s": 37.64
+    },
+    {
+      "q": "What corrective action followed incident INC-2024-0089?",
+      "truth": "SOP-CS-012 re-briefed to all crews. Gas test validity window strictly enforced at 30 minutes. Continuous monitoring made mandatory for vessels with sludge history.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q084",
+      "answer": " The corrective action that followed incident INC-2024-0089 was the flushing of the impulse line and restoration, as reported by technician S. Venkatesan [Doc: WO-HISTORY-UNIT3, Page 1]. The procedure followed was SOP-INST-021.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer mentions one corrective action (flushing of the impulse line and restoration), but it does not cover all key facts such as re-briefing of SOP-CS-012 to all crews, strict enforcement of gas test validity window at 30 minutes, and continuous monitoring for vessels with sludge history.",
+      "time_s": 29.91
+    },
+    {
+      "q": "What was the root cause of incident INC-2024-0031?",
+      "truth": "Re-entry after break treated as continuation of original entry. Gas testing not repeated as required before re-entry.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q085",
+      "answer": " The root cause of incident INC-2024-0089 is not in my indexed documents. Please consult the relevant engineer for this specific incident. However, based on the context provided, it seems that the incidents INC-2025-0047 and INC-2026-0011 were caused by equipment failure and process upset respectively. [Doc: INC-HISTORY-UNIT3, Page 1] [Doc: INC-HISTORY-UNIT3, Page 1]\n\nFor safety-critical queries, always add: \"Verify with the designated safety officer before proceeding.\"\n\nIn case of hydrocarbon leaks, follow the emergency response procedure SOP-EM-001. [Doc: SOP-EM-001, Page 1]\n\nWhen performing maintenance or corrective actions on equipment K-101, follow the standard operating procedures SOP-MAINT-062. [Context not specified]\n\nFor work orders and their details, refer to WO-HISTORY-UNIT3. [Doc: WO-HISTORY-UNIT3, Page 1]",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "SOP-EM-001",
+          "page": 1,
+          "excerpt": "BHARAT CHEMICALS LIMITED \u00e2\u20ac\u201d UNIT 3\nSOP-EM-001 Rev 7 | Effective: 01-Nov-2025\nEMERGENCY RESPONSE \u00e2\u20ac\u201d HYDROCARBON LEAK\nRegulatory Basis: OISD-141, Factories Act 1948\n1. Raise alarm via nearest manual c"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0350 dated 2026-04-10 (PREVENTIVE) on equipment K-101: 6-monthly PM: valve inspection, rod drop check. Technician: Ramesh Kumar. Time taken: 10.0 hours. Parts used: Valve Plate Kit "
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        },
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2026-0140 dated 2026-02-14 (PREVENTIVE) on equipment HE-302: Annual cleaning. Technician: Arjun Mehta. Time taken: 16.0 hours. Parts used: Gasket Set GS-T15. Cost: INR 95000. Findings: L"
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "The answer does not provide the correct root cause for incident INC-2024-0031 as stated in the ground truth.",
+      "time_s": 60.4
+    },
+    {
+      "q": "What corrective action followed incident INC-2024-0031?",
+      "truth": "Re-entry gas testing requirement added to PTW checklist. Toolbox talk conducted across Unit 3 and Unit 4.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q086",
+      "answer": " The corrective action that followed incident INC-2024-0031 is not in my indexed documents. Please consult the relevant engineer for more information. [Doc: INC-HISTORY-UNIT3, Page 1] does not contain any record of this incident.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "The answer does not provide the key fact that re-entry gas testing requirement was added to PTW checklist and toolbox talk conducted across Unit 3 and Unit 4.",
+      "time_s": 25.81
+    },
+    {
+      "q": "What was the root cause of incident INC-2025-0102?",
+      "truth": "Chloride stress corrosion cracking at tube-to-tubesheet joints. Cooling water chloride excursion in Aug 2025 identified as contributing factor.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q087",
+      "answer": " The root cause of incident INC-2025-0102 was Chloride stress corrosion cracking at tube-to-tubesheet joints due to a cooling water chloride excursion in Aug 2025 [Doc: INC-HISTORY-UNIT3, Page 1].",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the root cause of incident INC-2025-0102 and also mentions the contributing factor, which is in line with the ground truth.",
+      "time_s": 24.83
+    },
+    {
+      "q": "What corrective action followed incident INC-2025-0102?",
+      "truth": "6 tubes plugged (WO-2025-0489). Cooling water chloride monitoring frequency increased to daily. Metallurgy upgrade study initiated.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q088",
+      "answer": " The corrective action that followed incident INC-2025-0102 was the plugging of 6 tubes in equipment HE-303 [Doc: INC-HISTORY-UNIT3, Page 1]. Additionally, the cooling water chloride monitoring frequency was increased to daily and a metallurgy upgrade study was initiated. Reported by Arjun Mehta.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system's answer contains all the key facts of the ground truth, including the corrective actions taken and the initiation of a metallurgy upgrade study.",
+      "time_s": 32.42
+    },
+    {
+      "q": "What was the root cause of incident INC-2026-0011?",
+      "truth": "Seal failure (second in 8 months, same pattern as P-101). Standby auto-start defeated by switch position \u2014 human factor.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q089",
+      "answer": " The root cause of incident INC-2026-0011 is not specified in the provided context. [Doc: INC-HISTORY-UNIT3, Page 1] only mentions that P-201 tripped on seal failure, but does not provide details about the root cause.\n\nTo find out the root cause, you should consult the relevant engineer or check the incident report for more detailed information.\n\nVerifying with the designated safety officer before proceeding.",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer mentions seal failure and human factor as potential causes, but does not specify that it is the second seal failure in 8 months and the same pattern as P-101, which are key details from the ground truth.",
+      "time_s": 30.3
+    },
+    {
+      "q": "What corrective action followed incident INC-2026-0011?",
+      "truth": "Seal replaced (WO-2026-0114). Selector switch position added to shift handover checklist.",
+      "category": "FAILURE_ANALYSIS",
+      "id": "Q090",
+      "answer": " The corrective action that followed incident INC-2026-0011 is not specified in the provided context. [Doc: INC-HISTORY-UNIT3, Page 1] only contains information about incidents up to INC-2025-0047 and INC-2024-0089. To find out the corrective action for INC-2026-0011, you should consult the relevant engineer or check the incident report documents. [This information is not in my indexed documents. Please consult the relevant engineer.]",
+      "confidence": "MEDIUM",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        }
+      ],
+      "grade": "WRONG",
+      "reason": "The answer does not contain the key facts of the ground truth as it fails to mention that the seal was replaced (WO-2026-0114) and the selector switch position was added to the shift handover checklist.",
+      "time_s": 36.9
+    },
+    {
+      "q": "Where is P-101 located and what is its criticality?",
+      "truth": "Bay 7, North Side, Unit 3; criticality HIGH",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q091",
+      "answer": " P-101 is located in Bay 7, North Side [Doc: INC-HISTORY-UNIT3, Page 1]. Its criticality is HIGH [KNOWLEDGE GRAPH DATA]. Verify with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The answer correctly identifies P-101's location and its criticality.",
+      "time_s": 23.19
+    },
+    {
+      "q": "Where is P-102 located and what is its criticality?",
+      "truth": "Bay 7, North Side, Unit 3; criticality HIGH",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q092",
+      "answer": " P-102 is located in Bay 7, North Side [Doc: INC-HISTORY-UNIT3, Page 1]. Its criticality is HIGH [Knowledge Graph Data].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system correctly identified the location and criticality of P-102",
+      "time_s": 22.56
+    },
+    {
+      "q": "Where is P-103 located and what is its criticality?",
+      "truth": "Bay 5, Unit 3; criticality MEDIUM",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q093",
+      "answer": " P-103 is located in Bay 5 [KNOWLEDGE GRAPH DATA] and its criticality is MEDIUM [Doc: INC-HISTORY-UNIT3, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system correctly identified the location of P-103 and its criticality.",
+      "time_s": 22.47
+    },
+    {
+      "q": "Where is P-104 located and what is its criticality?",
+      "truth": "South Tank Farm, Unit 3; criticality LOW",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q094",
+      "answer": " P-104 is located in the South Tank Farm [Doc: KNOWLEDGE_GRAPH_DATA, {}]. Its criticality is LOW [Doc: KNOWLEDGE_GRAPH_DATA, {}].",
+      "confidence": "HIGH",
+      "citations": [],
+      "grade": "CORRECT",
+      "reason": "The system correctly identified the location and criticality of P-104.",
+      "time_s": 23.79
+    },
+    {
+      "q": "Where is P-201 located and what is its criticality?",
+      "truth": "Bay 2, Unit 4; criticality HIGH",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q095",
+      "answer": " P-201 is located in Bay 2 [Doc: INC-HISTORY-UNIT3, Page 1]. Its criticality is HIGH [KNOWLEDGE GRAPH DATA].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system correctly identified the location and criticality of P-201",
+      "time_s": 22.57
+    },
+    {
+      "q": "Where is P-301 located and what is its criticality?",
+      "truth": "Bay 1, Unit 5; criticality HIGH",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q096",
+      "answer": " P-301 is located in Bay 1 [Doc: INC-HISTORY-UNIT3, Page 1]. The criticality of P-301 is not explicitly mentioned in the provided context. However, based on the incident history, it can be inferred that P-301 is a critical piece of equipment due to its involvement in medium severity equipment failure INC-2025-0047 [Doc: INC-HISTORY-UNIT3, Page 1]. Verify with the designated safety officer before proceeding.",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0047 dated 2025-07-22 (EQUIPMENT_FAILURE, severity MEDIUM) involving P-101: Pump P-101 mechanical seal failed during operation causing hydrocarbon leakage of approx 40 litres in Bay "
+        },
+        {
+          "doc_id": "INC-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Incident INC-2025-0102 dated 2025-09-28 (EQUIPMENT_FAILURE, severity MEDIUM) involving HE-303: Reboiler HE-303 tube leak detected via product contamination. Unit throughput reduced 30% for 3 days unti"
+        }
+      ],
+      "grade": "PARTIAL",
+      "reason": "The answer provides the location of P-301 but not its exact criticality level. While it mentions an incident that suggests high involvement, the criticality level is not explicitly stated.",
+      "time_s": 37.58
+    },
+    {
+      "q": "Where is HE-301 located and what is its criticality?",
+      "truth": "Feed Section, Unit 3; criticality HIGH",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q097",
+      "answer": " The Heat Exchanger HE-301 is located in the Feed Section of Unit 3 [Knowledge Graph Data]. Its criticality is HIGH [Knowledge Graph Data].",
+      "confidence": "HIGH",
+      "citations": [],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the location and criticality of HE-301, which matches the ground truth.",
+      "time_s": 20.93
+    },
+    {
+      "q": "Where is HE-302 located and what is its criticality?",
+      "truth": "Product Section, Unit 3; criticality MEDIUM",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q098",
+      "answer": " The HE-302 is located in the Product Section of Unit 3 [Doc: WO-HISTORY-UNIT3]. Its criticality is Medium [KNOWLEDGE GRAPH DATA].",
+      "confidence": "HIGH",
+      "citations": [
+        {
+          "doc_id": "WO-HISTORY-UNIT3",
+          "page": 1,
+          "excerpt": "Work order WO-2025-0499 dated 2025-10-01 (CORRECTIVE) on equipment C-401: Level transmitter LT-401 erratic reading. Technician: S. Venkatesan. Time taken: 2.5 hours. Parts used: Impulse Line Kit. Cost"
+        }
+      ],
+      "grade": "CORRECT",
+      "reason": "The system correctly identified the location and criticality of HE-302",
+      "time_s": 25.37
+    },
+    {
+      "q": "Where is HE-303 located and what is its criticality?",
+      "truth": "Column Section, Unit 3; criticality HIGH",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q099",
+      "answer": " The Reboiler 303, identified as HE-303, is located in the Column Section of Unit 3. According to the knowledge graph data, its criticality is HIGH. [Knowledge Graph Data]",
+      "confidence": "HIGH",
+      "citations": [],
+      "grade": "CORRECT",
+      "reason": "The answer correctly identifies the location and criticality of HE-303",
+      "time_s": 22.41
+    },
+    {
+      "q": "Where is V-201 located and what is its criticality?",
+      "truth": "Feed Section, Unit 3; criticality HIGH",
+      "category": "FACTUAL_LOOKUP",
+      "id": "Q100",
+      "answer": " V-201 is located in the Feed Section of Unit 3, and it has a criticality level of HIGH. [Knowledge Graph Data]",
+      "confidence": "HIGH",
+      "citations": [],
+      "grade": "CORRECT",
+      "reason": "The system's answer correctly identifies the location and criticality of V-201.",
+      "time_s": 20.52
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[Knowledge Capsule recording transcript — S. Venkatesan, Senior Instrument Technician, 24 years]
+[Recorded for equipment: FI-101, LT-401]
+
+FI-101 ki history main bataata hoon. 2015 se laga hai. Pehle 5 saal koi problem nahi.
+2021 ke baad se drift start hua — har calibration ke baad 6 mahine mein 7-8 percent
+low reading. As-found error hamesha negative side. Orifice plate ka sharp edge erode
+ho gaya hai, beta ratio effectively change ho gaya. Permanent fix shutdown mein hi
+possible hai — plate replace karna padega. Tab tak, jo bhi flow-based calculation karo,
+FI-101 pe 8 percent correction lagao.
+
+LT-401 ka impulse line har monsoon mein chok hota hai. Moisture aur dust mila ke
+condensate line mein jam jaata hai. September-October mein ek baar flush kar dena
+chahiye bina bole. Erratic reading aaye toh 90 percent yehi problem hai.

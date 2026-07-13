@@ -1,0 +1,10 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+SOP-EM-001 Rev 7 | Effective: 01-Nov-2025
+EMERGENCY RESPONSE — HYDROCARBON LEAK
+Regulatory Basis: OISD-141, Factories Act 1948
+1. Raise alarm via nearest manual call point; inform shift supervisor on channel 1.
+2. Isolate leak source remotely if safe (remote operated valves from control room).
+3. Cordon area 15 m radius minimum; eliminate ignition sources; deploy water curtain if vapour cloud.
+4. Leak from pump seal: switch to standby pump, isolate leaking pump, depressurise to flare.
+5. HSE officer performs LEL survey before declaring area safe.
+6. All leaks above 10 litres logged as incident with root cause analysis within 7 days.

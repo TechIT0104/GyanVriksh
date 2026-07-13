@@ -1,0 +1,77 @@
+[
+  {
+    "person_id": "EMP-0234",
+    "name": "Ramesh Kumar",
+    "designation": "Senior Maintenance Technician",
+    "department": "Mechanical Maintenance",
+    "expertise": [
+      "Rotating Equipment",
+      "Seal Systems",
+      "Vibration Analysis"
+    ],
+    "years_experience": 22,
+    "retirement_date": "2029-03-31"
+  },
+  {
+    "person_id": "EMP-0198",
+    "name": "J.P. Sharma",
+    "designation": "Shift Supervisor (Operations)",
+    "department": "Production",
+    "expertise": [
+      "Startup/Shutdown Operations",
+      "Process Troubleshooting"
+    ],
+    "years_experience": 26,
+    "retirement_date": "2027-09-30"
+  },
+  {
+    "person_id": "EMP-0412",
+    "name": "Arjun Mehta",
+    "designation": "Maintenance Engineer",
+    "department": "Mechanical Maintenance",
+    "expertise": [
+      "Heat Exchangers",
+      "Planning"
+    ],
+    "years_experience": 8,
+    "retirement_date": "2044-05-31"
+  },
+  {
+    "person_id": "EMP-0455",
+    "name": "Sunil Yadav",
+    "designation": "Field Technician",
+    "department": "Mechanical Maintenance",
+    "expertise": [
+      "Pumps",
+      "Valves"
+    ],
+    "years_experience": 5,
+    "retirement_date": "2048-01-31"
+  },
+  {
+    "person_id": "EMP-0301",
+    "name": "Kavita Rao",
+    "designation": "HSE Officer (Grade-B)",
+    "department": "Safety",
+    "expertise": [
+      "PTW Systems",
+      "Confined Space Entry",
+      "Gas Testing"
+    ],
+    "years_experience": 14,
+    "retirement_date": "2038-11-30"
+  },
+  {
+    "person_id": "EMP-0102",
+    "name": "S. Venkatesan",
+    "designation": "Senior Instrument Technician",
+    "department": "Instrumentation",
+    "expertise": [
+      "Flow Metering",
+      "DCS",
+      "Calibration"
+    ],
+    "years_experience": 24,
+    "retirement_date": "2028-06-30"
+  }
+]

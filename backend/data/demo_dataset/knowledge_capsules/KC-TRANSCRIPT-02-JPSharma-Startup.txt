@@ -1,0 +1,15 @@
+[Knowledge Capsule recording transcript — J.P. Sharma, Shift Supervisor, 26 years]
+[Recorded for equipment: C-401, HE-303]
+
+Startup ke time sabse badi galti log jaldi mein karte hain — HE-303 reboiler ko fast
+heat up karna. SOP mein 25 degree per hour likha hai, aur yeh seriously follow karna
+hai. 2019 mein humne jaldi ki thi, tube-to-tubesheet joint mein leak ho gaya tha.
+Wohi joint 2025 mein phir gaya — woh metallurgy hi sensitive hai.
+
+C-401 mein reflux pehle establish karo, feed baad mein. Agar feed pehle daal doge toh
+column flooding hoga aur differential pressure spike karega. DP agar 0.4 bar cross kare
+toh samajh jao flooding start ho gayi — feed kam karo, patience rakho.
+
+Aur night shift mein agar P-201 trip ho toh pehle selector switch check karo — auto mein
+hai ya manual mein. January mein 40 minute ka feed loss sirf is wajah se hua tha ki
+switch manual pe chhoda tha kisi ne.

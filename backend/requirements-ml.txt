@@ -1,0 +1,19 @@
+# Heavy, optional ML dependencies - only needed for: scanned-PDF/image OCR
+# (paddleocr/paddlepaddle), BGE-M3 embeddings (FlagEmbedding), and Knowledge
+# Preservation Mode audio transcription (openai-whisper, librosa,
+# noisereduce). All of these are lazily imported inside their service
+# functions (see app/services/ocr_service.py, embedding_service.py,
+# whisper_service.py) - the API starts fine and every other feature works
+# without this file installed. Installed as a separate, best-effort step so
+# a build failure here (these packages are notoriously fragile to build on
+# Windows) doesn't block the rest of the setup.
+paddleocr==2.7.3
+paddlepaddle==2.6.2
+FlagEmbedding==1.2.10
+# sentence-transformers is the automatic fallback embedding_service.py uses
+# if FlagEmbedding is missing/fails - was previously undeclared as a
+# dependency anywhere, meaning the fallback path itself could never work.
+sentence-transformers
+openai-whisper==20231117
+noisereduce==3.0.2
+librosa==0.10.2

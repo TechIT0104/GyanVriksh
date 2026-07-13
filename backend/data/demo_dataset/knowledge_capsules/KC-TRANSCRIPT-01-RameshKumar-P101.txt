@@ -1,0 +1,22 @@
+[Knowledge Capsule recording transcript — Ramesh Kumar, Senior Maintenance Technician, 22 years]
+[Recorded for equipment: P-101, FI-101]
+
+Dekho, P-101 ka jo seal hai na, woh kabhi achanak fail nahi hota. Pehle se bataata hai.
+Ek halki si vibration aati hai, matlab bearing housing pe haath rakho toh feel hogi —
+gauge pe shayad 4 ke aas paas dikhega, but feel alag hai. Aur ek halki whistling sound
+aati hai suction side se. Jab yeh dono cheezein ek saath ho, samajh jao seal 10-15 din
+mein jaayega. Main teen baar aise hi pakda hoon pehle se.
+
+Aur subah startup se pehle, suction strainer zaroor check karo. Raat bhar mein sediment
+settle hota hai, strainer chok ho jaata hai. Strainer choked matlab NPSH kam, matlab
+cavitation, matlab seal pe stress. Yeh morning check koi SOP mein nahi likha proper se,
+but yeh karna zaroori hai.
+
+Ek aur baat — FI-101 flow meter. Woh hamesha 8 percent kam dikhata hai. Calibration ke
+baad theek ho jaata hai, phir 6 mahine mein wapas drift. Orifice plate ka edge ghis gaya
+hai. Toh jab bhi FI-101 ka reading dekho, 8 percent add kar lo mann mein. Venkatesan ko
+bhi pata hai yeh baat.
+
+Aur haan, agar P-101 mein cavitation ki awaaz aaye — jaise bajri ghum rahi ho pump mein —
+toh pehle V-201 ka level dekho. Level 40 se neeche hai toh wahi problem hai. Level theek
+hai toh suction line mein air pocket hoga, high point vent se nikaalo.

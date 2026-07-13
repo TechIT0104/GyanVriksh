@@ -1,0 +1,12 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+SOP-MAINT-012 Rev 5 | Effective: 02-Mar-2024
+ROTATING EQUIPMENT PREVENTIVE MAINTENANCE (QUARTERLY / HALF-YEARLY)
+Applicable: All pumps Unit 3/4/5 | Risk Level: LOW | Regulatory Basis: OISD-116 Section 5
+
+1. Issue cold work permit signed by area in-charge.
+2. Vibration measurement at DE and NDE bearings. Alert limit 4.5 mm/s RMS; trip review at 7.1 mm/s.
+3. Bearing temperature check — max 75°C.
+4. Grease bearings with EP-2 (25g per point) unless oil-lubricated.
+5. Check coupling condition through guard window.
+6. Clean suction strainer if differential pressure exceeds 0.3 bar or on schedule.
+7. Record all readings in CMMS against the work order.

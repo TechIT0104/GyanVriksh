@@ -1,0 +1,10 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+SOP-PTW-003 Rev 6 | Effective: 01-Jan-2025
+PERMIT TO WORK SYSTEM
+Regulatory Basis: OISD-145
+1. Permit types: Cold Work, Hot Work, Confined Space Entry, Electrical, Excavation, Working at Height.
+2. Hot work and confined space permits must be countersigned by a qualified HSE officer (minimum Grade-B).
+3. Permit validity: one shift. Revalidation requires fresh gas test where applicable.
+4. Permit must reference the applicable SOP and JSA number.
+5. Site inspection by permit issuer before authorization is mandatory.
+6. All permits closed out with site restoration check.

@@ -1,0 +1,16 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+SOP-CS-012 Rev 4 | Effective: 15-Feb-2025 | Approver: Plant Safety Manager
+CONFINED SPACE ENTRY PROCEDURE
+Applicable: All vessels, columns, drums, tanks | Risk Level: HIGH
+Regulatory Basis: OISD-105, Factories Act 1948 Section 36
+
+1. Confined space entry permit (PTW-CS type) must be issued and countersigned by a
+   Grade-B HSE officer before entry.
+2. Section 6.2 — GAS TESTING: Oxygen 19.5-23.5%, LEL below 5%, H2S below 10 ppm, CO below 25 ppm.
+   Gas testing must be performed not more than 30 minutes before entry. If entry is
+   interrupted for more than 15 minutes, gas testing must be repeated before re-entry.
+3. Section 6.3 — Continuous gas monitoring is mandatory for vessels with sludge or scale history.
+4. Trained attendant (hole watch) must remain at the manway for the full duration of entry.
+5. Rescue tripod, harness and SCBA set staged at the entry point.
+6. Communication check every 15 minutes between entrant and attendant.
+7. Entry log must record every entry and exit with timestamps.

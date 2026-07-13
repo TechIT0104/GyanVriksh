@@ -1,0 +1,12 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+SOP-SU-004 Rev 3 | Effective: 20-Aug-2025
+UNIT 3 COLD START-UP PROCEDURE
+Regulatory Basis: OISD-117
+1. Confirm all blinds removed per blind list; PSVs in service (PSV-201A, PSV-202A car-sealed open).
+2. Nitrogen purge until oxygen below 1%; then hydrocarbon inventory-in.
+3. BEFORE starting feed pump P-101: check suction strainer differential pressure and
+   verify V-201 drum level above 40% to ensure adequate NPSH.
+4. Start P-101 on minimum flow; ramp per curve. Listen for cavitation; if detected,
+   check for air pocket in the suction line via high-point vent.
+5. Establish C-401 reflux before introducing feed to column.
+6. Raise HE-303 reboiler duty at max 25°C/hour.

@@ -1,0 +1,10 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+SOP-MAINT-062 Rev 1 | Effective: 12-Jun-2025
+RECIPROCATING COMPRESSOR VALVE MAINTENANCE (K-101)
+Regulatory Basis: OISD-116 Section 5
+1. PTW with electrical isolation verified; barring gear engaged.
+2. Depressurise and purge cylinder with nitrogen; verify LEL below 5% locally.
+3. Remove valve covers; extract suction/discharge valve assemblies with OEM puller.
+4. Inspect valve plates and springs; replace if any crack or wear step visible.
+5. Torque valve cover bolts per OEM table; leak test at 5 bar nitrogen before handback.
+6. Rod drop reading before and after maintenance; record in CMMS.

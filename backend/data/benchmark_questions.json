@@ -1,0 +1,602 @@
+[
+  {
+    "q": "When was P-101 last serviced and what was done?",
+    "truth": "15-Mar-2026, mechanical seal replacement (WO-2026-0831) by Ramesh Kumar",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q001"
+  },
+  {
+    "q": "Does SOP-MAINT-047 comply with OISD-116 section 5.3.2?",
+    "truth": "Partial compliance \u2014 Step 1 says 'Issue PTW' but does not specify that a qualified safety officer (minimum Grade-B HSE) must sign it",
+    "category": "COMPLIANCE_CHECK",
+    "id": "Q002"
+  },
+  {
+    "q": "Which equipment has the same failure mode as P-101?",
+    "truth": "P-201 (2 mechanical seal failures 2025-2026, same seal spec SK-101-A); P-301 has none because it uses AESSEAL MG1",
+    "category": "CROSS_ENTITY_REASONING",
+    "id": "Q003"
+  },
+  {
+    "q": "Who are the experts on P-101 and when do they retire?",
+    "truth": "Ramesh Kumar (multiple seal WOs + capsule KC-2026-0012), retires 31-Mar-2029",
+    "category": "KNOWLEDGE_CLIFF",
+    "id": "Q004"
+  },
+  {
+    "q": "What is the correct gas testing requirement before confined space entry?",
+    "truth": "Per SOP-CS-012 Section 6.2 and OISD-105 \u00a74.3: O2 19.5-23.5%, LEL <5%, H2S <10ppm, CO <25ppm; test not more than 30 minutes before entry; repeat after >15 minute interruption",
+    "category": "PROCEDURE_QUERY",
+    "id": "Q005"
+  },
+  {
+    "q": "Is FI-101 accurate?",
+    "truth": "No \u2014 it reads approximately 8% low due to orifice edge wear. Per Ramesh Kumar and S. Venkatesan (knowledge capsules) add 8% to readings; permanent fix is plate replacement at shutdown",
+    "category": "KNOWLEDGE_CAPSULE",
+    "id": "Q006"
+  },
+  {
+    "q": "What warning signs appear before a P-101 seal failure?",
+    "truth": "Slight bearing-housing vibration (~4 mm/s) plus faint whistling from suction side, appearing 10-15 days before failure (Ramesh Kumar capsule KC-2026-0012)",
+    "category": "KNOWLEDGE_CAPSULE",
+    "id": "Q007"
+  },
+  {
+    "q": "Why do P-101 seals keep failing?",
+    "truth": "Sustained operation above 70\u00b0C with a seal spec marginal for thermal cycling; contributing: clogged suction strainer causing cavitation stress. Root cause per INC-2025-0047",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q008"
+  },
+  {
+    "q": "What should be checked before starting P-101 in the morning?",
+    "truth": "Suction strainer (overnight sediment clogging) and V-201 level above 40% for NPSH, per SOP-SU-004 and Ramesh Kumar's capsule",
+    "category": "PROCEDURE_QUERY",
+    "id": "Q009"
+  },
+  {
+    "q": "What was the near-miss in V-203 and what changed after it?",
+    "truth": "Dec-2024 (INC-2024-0089): gas detector alarmed at 8% LEL during entry; gas test was 45 min old. Gas test 30-min validity now strictly enforced and continuous monitoring mandatory for sludge-history vessels",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q010"
+  },
+  {
+    "q": "What is the maximum heat-up rate for HE-303 and why?",
+    "truth": "25\u00b0C/hour per SOP-SU-004; fast heat-up caused tube-to-tubesheet leaks in 2019 and 2025 (J.P. Sharma capsule)",
+    "category": "KNOWLEDGE_CAPSULE",
+    "id": "Q011"
+  },
+  {
+    "q": "How should a hydrocarbon leak from a pump seal be handled?",
+    "truth": "Per SOP-EM-001: raise alarm, switch to standby pump, isolate leaking pump, depressurise to flare, cordon 15m, eliminate ignition sources; leaks >10L logged as incident with RCA in 7 days",
+    "category": "PROCEDURE_QUERY",
+    "id": "Q012"
+  },
+  {
+    "q": "Which regulation governs PTW countersignature and what does it require?",
+    "truth": "OISD-116 \u00a75.3.2 (rotating equipment) and OISD-145 \u00a73.2: permits signed/countersigned by a qualified safety officer, minimum Grade-B HSE",
+    "category": "COMPLIANCE_CHECK",
+    "id": "Q013"
+  },
+  {
+    "q": "What did the Feb-2026 internal audit find about SOP-MAINT-047?",
+    "truth": "AUDIT-2026-INT-01: 3 of 25 cold work permits not countersigned by HSE officer; SOP-MAINT-047 Step 1 doesn't specify signatory authority \u2014 recommends adding Grade-B HSE countersignature",
+    "category": "COMPLIANCE_CHECK",
+    "id": "Q014"
+  },
+  {
+    "q": "What is P-101's maintenance interval and why was it changed?",
+    "truth": "90 days, reduced from 180 after the Jul-2025 seal failure incident INC-2025-0047",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q015"
+  },
+  {
+    "q": "Which experts retire within 3 years and what knowledge is at risk?",
+    "truth": "J.P. Sharma (Sep-2027, startup/shutdown expertise, capsule KC-2026-0013 captured), S. Venkatesan (Jun-2028, instrumentation, KC-2026-0014), Ramesh Kumar (Mar-2029, rotating equipment, KC-2026-0012)",
+    "category": "KNOWLEDGE_CLIFF",
+    "id": "Q016"
+  },
+  {
+    "q": "What happens if C-401 differential pressure crosses 0.4 bar during startup?",
+    "truth": "Indicates column flooding \u2014 reduce feed and wait, per J.P. Sharma's capsule KC-2026-0013",
+    "category": "KNOWLEDGE_CAPSULE",
+    "id": "Q017"
+  },
+  {
+    "q": "Why did P-201 cause a feed interruption in January 2026?",
+    "truth": "INC-2026-0011: P-201 tripped on seal failure and standby didn't auto-start because selector switch was in manual; 40-minute interruption",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q018"
+  },
+  {
+    "q": "What is the vibration alert limit for pumps and where is it defined?",
+    "truth": "4.5 mm/s RMS alert (trip review 7.1 mm/s) per SOP-MAINT-012",
+    "category": "PROCEDURE_QUERY",
+    "id": "Q019"
+  },
+  {
+    "q": "What corrective action was recommended for the HE-303 tube leaks?",
+    "truth": "6 tubes plugged (WO-2025-0489); daily cooling water chloride monitoring; metallurgy upgrade study \u2014 chloride stress corrosion at tube-to-tubesheet joints",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q020"
+  },
+  {
+    "q": "What work was done on P-101 on 2024-11-08?",
+    "truth": "Mechanical seal replacement after leak detected (WO-2024-0512), technician Ramesh Kumar. Findings: Seal face worn beyond tolerance. Operating temp logged >70\u00b0C during preceding week.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q021"
+  },
+  {
+    "q": "Who performed work order WO-2024-0512 and what were the findings?",
+    "truth": "Ramesh Kumar; findings: Seal face worn beyond tolerance. Operating temp logged >70\u00b0C during preceding week.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q022"
+  },
+  {
+    "q": "What work was done on P-101 on 2025-03-02?",
+    "truth": "Mechanical seal replacement \u2014 seal failure during night shift (WO-2025-0119), technician Ramesh Kumar. Findings: Spring fatigue observed on seal assembly. Slight shaft vibration noted before failure per operator log. High-temperature operation >70\u00b0C recorded.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q023"
+  },
+  {
+    "q": "Who performed work order WO-2025-0119 and what were the findings?",
+    "truth": "Ramesh Kumar; findings: Spring fatigue observed on seal assembly. Slight shaft vibration noted before failure per operator log. High-temperature operation >70\u00b0C recorded.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q024"
+  },
+  {
+    "q": "What work was done on P-101 on 2025-07-24?",
+    "truth": "Seal replacement following INC-2025-0047 hydrocarbon leak (WO-2025-0388), technician Ramesh Kumar. Findings: Seal face worn beyond tolerance, spring fatigue observed. Suction strainer found partially clogged with sediment.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q025"
+  },
+  {
+    "q": "Who performed work order WO-2025-0388 and what were the findings?",
+    "truth": "Ramesh Kumar; findings: Seal face worn beyond tolerance, spring fatigue observed. Suction strainer found partially clogged with sediment.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q026"
+  },
+  {
+    "q": "What work was done on P-101 on 2026-03-15?",
+    "truth": "Mechanical seal replacement (WO-2026-0831), technician Ramesh Kumar. Findings: Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q027"
+  },
+  {
+    "q": "Who performed work order WO-2026-0831 and what were the findings?",
+    "truth": "Ramesh Kumar; findings: Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q028"
+  },
+  {
+    "q": "What work was done on P-101 on 2025-04-15?",
+    "truth": "Quarterly PM: alignment check, lubrication, vibration reading (WO-2025-0201), technician Sunil Yadav. Findings: Vibration 4.2 mm/s (alert limit 4.5). Slight increase vs last reading 3.1 mm/s.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q029"
+  },
+  {
+    "q": "Who performed work order WO-2025-0201 and what were the findings?",
+    "truth": "Sunil Yadav; findings: Vibration 4.2 mm/s (alert limit 4.5). Slight increase vs last reading 3.1 mm/s.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q030"
+  },
+  {
+    "q": "What work was done on P-101 on 2025-11-20?",
+    "truth": "Quarterly PM and suction strainer cleaning (WO-2025-0602), technician Sunil Yadav. Findings: Strainer 40% clogged with sediment. Cleaned. Recommend morning strainer check before startup.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q031"
+  },
+  {
+    "q": "Who performed work order WO-2025-0602 and what were the findings?",
+    "truth": "Sunil Yadav; findings: Strainer 40% clogged with sediment. Cleaned. Recommend morning strainer check before startup.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q032"
+  },
+  {
+    "q": "What work was done on P-201 on 2025-06-11?",
+    "truth": "Mechanical seal replacement (WO-2025-0290), technician Ramesh Kumar. Findings: Seal face wear similar to P-101 pattern. Same seal specification.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q033"
+  },
+  {
+    "q": "Who performed work order WO-2025-0290 and what were the findings?",
+    "truth": "Ramesh Kumar; findings: Seal face wear similar to P-101 pattern. Same seal specification.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q034"
+  },
+  {
+    "q": "What work was done on P-201 on 2026-01-28?",
+    "truth": "Seal leak \u2014 replaced mechanical seal (WO-2026-0114), technician Arjun Mehta. Findings: Spring fatigue on seal assembly. Second failure in 8 months on this tag.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q035"
+  },
+  {
+    "q": "Who performed work order WO-2026-0114 and what were the findings?",
+    "truth": "Arjun Mehta; findings: Spring fatigue on seal assembly. Second failure in 8 months on this tag.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q036"
+  },
+  {
+    "q": "What work was done on P-201 on 2026-02-10?",
+    "truth": "Half-yearly PM (WO-2026-0233), technician Sunil Yadav. Findings: Normal. Vibration 2.8 mm/s.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q037"
+  },
+  {
+    "q": "Who performed work order WO-2026-0233 and what were the findings?",
+    "truth": "Sunil Yadav; findings: Normal. Vibration 2.8 mm/s.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q038"
+  },
+  {
+    "q": "What work was done on P-301 on 2026-06-01?",
+    "truth": "Half-yearly PM (WO-2026-0501), technician Sunil Yadav. Findings: Normal. AESSEAL MG1 seal in excellent condition \u2014 no seal failure since 2018 installation.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q039"
+  },
+  {
+    "q": "Who performed work order WO-2026-0501 and what were the findings?",
+    "truth": "Sunil Yadav; findings: Normal. AESSEAL MG1 seal in excellent condition \u2014 no seal failure since 2018 installation.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q040"
+  },
+  {
+    "q": "What work was done on P-103 on 2026-01-18?",
+    "truth": "Half-yearly PM, coupling inspection (WO-2026-0087), technician Sunil Yadav. Findings: Coupling insert worn, replaced.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q041"
+  },
+  {
+    "q": "Who performed work order WO-2026-0087 and what were the findings?",
+    "truth": "Sunil Yadav; findings: Coupling insert worn, replaced.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q042"
+  },
+  {
+    "q": "What work was done on P-103 on 2025-09-03?",
+    "truth": "Cavitation noise investigation (WO-2025-0455), technician Ramesh Kumar. Findings: NPSH margin low at reduced drum level. Cavitation confirmed. Operations advised to maintain V-201 level above 40%.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q043"
+  },
+  {
+    "q": "Who performed work order WO-2025-0455 and what were the findings?",
+    "truth": "Ramesh Kumar; findings: NPSH margin low at reduced drum level. Cavitation confirmed. Operations advised to maintain V-201 level above 40%.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q044"
+  },
+  {
+    "q": "What work was done on P-104 on 2026-04-25?",
+    "truth": "Annual PM (WO-2026-0402), technician Sunil Yadav. Findings: Normal.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q045"
+  },
+  {
+    "q": "Who performed work order WO-2026-0402 and what were the findings?",
+    "truth": "Sunil Yadav; findings: Normal.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q046"
+  },
+  {
+    "q": "What work was done on P-102 on 2026-05-02?",
+    "truth": "Standby pump changeover run and PM (WO-2026-0410), technician Sunil Yadav. Findings: Ran normally for 8 hours on changeover.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q047"
+  },
+  {
+    "q": "Who performed work order WO-2026-0410 and what were the findings?",
+    "truth": "Sunil Yadav; findings: Ran normally for 8 hours on changeover.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q048"
+  },
+  {
+    "q": "What work was done on HE-301 on 2025-11-20?",
+    "truth": "Annual cleaning and eddy current tube inspection (WO-2025-0570), technician Arjun Mehta. Findings: Fouling on tube side reduced heat transfer ~12%. 3 tubes plugged (of 400) due to thinning.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q049"
+  },
+  {
+    "q": "Who performed work order WO-2025-0570 and what were the findings?",
+    "truth": "Arjun Mehta; findings: Fouling on tube side reduced heat transfer ~12%. 3 tubes plugged (of 400) due to thinning.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q050"
+  },
+  {
+    "q": "What work was done on HE-302 on 2026-02-14?",
+    "truth": "Annual cleaning (WO-2026-0140), technician Arjun Mehta. Findings: Light fouling. Cleaned.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q051"
+  },
+  {
+    "q": "Who performed work order WO-2026-0140 and what were the findings?",
+    "truth": "Arjun Mehta; findings: Light fouling. Cleaned.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q052"
+  },
+  {
+    "q": "What work was done on HE-303 on 2025-09-30?",
+    "truth": "Reboiler tube leak repair (WO-2025-0489), technician Arjun Mehta. Findings: 6 tubes leaking due to corrosion at tube-to-tubesheet joint. Plugged. Recommend metallurgy review \u2014 chloride stress corrosion suspected.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q053"
+  },
+  {
+    "q": "Who performed work order WO-2025-0489 and what were the findings?",
+    "truth": "Arjun Mehta; findings: 6 tubes leaking due to corrosion at tube-to-tubesheet joint. Plugged. Recommend metallurgy review \u2014 chloride stress corrosion suspected.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q054"
+  },
+  {
+    "q": "What work was done on V-201 on 2025-12-05?",
+    "truth": "Statutory internal inspection (confined space entry) (WO-2025-0610), technician Arjun Mehta. Findings: Internal inspection satisfactory. Minor pitting <0.5mm on bottom shell. Gas testing performed 25 min before entry \u2014 flagged by HSE as exceeding 30-min validity window during audit.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q055"
+  },
+  {
+    "q": "Who performed work order WO-2025-0610 and what were the findings?",
+    "truth": "Arjun Mehta; findings: Internal inspection satisfactory. Minor pitting <0.5mm on bottom shell. Gas testing performed 25 min before entry \u2014 flagged by HSE as exceeding 30-min validity window during audit.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q056"
+  },
+  {
+    "q": "What work was done on V-202 on 2025-12-05?",
+    "truth": "Statutory internal inspection (confined space entry) (WO-2025-0611), technician Arjun Mehta. Findings: Satisfactory.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q057"
+  },
+  {
+    "q": "Who performed work order WO-2025-0611 and what were the findings?",
+    "truth": "Arjun Mehta; findings: Satisfactory.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q058"
+  },
+  {
+    "q": "What work was done on V-203 on 2026-03-01?",
+    "truth": "Internal inspection (confined space entry) (WO-2026-0301), technician Sunil Yadav. Findings: Demister pad partially collapsed, replaced under separate WO.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q059"
+  },
+  {
+    "q": "Who performed work order WO-2026-0301 and what were the findings?",
+    "truth": "Sunil Yadav; findings: Demister pad partially collapsed, replaced under separate WO.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q060"
+  },
+  {
+    "q": "What work was done on C-401 on 2025-10-15?",
+    "truth": "Column internals inspection during shutdown (WO-2025-0520), technician Arjun Mehta. Findings: Trays 12-15 valve wear, replaced. Downcomer clearances OK.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q061"
+  },
+  {
+    "q": "Who performed work order WO-2025-0520 and what were the findings?",
+    "truth": "Arjun Mehta; findings: Trays 12-15 valve wear, replaced. Downcomer clearances OK.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q062"
+  },
+  {
+    "q": "What work was done on K-101 on 2026-04-10?",
+    "truth": "6-monthly PM: valve inspection, rod drop check (WO-2026-0350), technician Ramesh Kumar. Findings: 2nd stage suction valve plates worn, replaced. Rod drop within limits.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q063"
+  },
+  {
+    "q": "Who performed work order WO-2026-0350 and what were the findings?",
+    "truth": "Ramesh Kumar; findings: 2nd stage suction valve plates worn, replaced. Rod drop within limits.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q064"
+  },
+  {
+    "q": "What work was done on K-101 on 2025-07-02?",
+    "truth": "High discharge temperature alarm investigation (WO-2025-0333), technician Ramesh Kumar. Findings: 3rd stage discharge valve leaking causing recompression heating. Replaced.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q065"
+  },
+  {
+    "q": "Who performed work order WO-2025-0333 and what were the findings?",
+    "truth": "Ramesh Kumar; findings: 3rd stage discharge valve leaking causing recompression heating. Replaced.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q066"
+  },
+  {
+    "q": "What work was done on FI-101 on 2024-08-20?",
+    "truth": "Flow meter calibration (WO-2024-0450), technician S. Venkatesan. Findings: Calibrated against master meter. NOTE: as-found error -7.8% (reading low). As-left within \u00b10.5%. Recommend orifice plate inspection at next shutdown \u2014 edge wear suspected, drift likely to recur.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q067"
+  },
+  {
+    "q": "Who performed work order WO-2024-0450 and what were the findings?",
+    "truth": "S. Venkatesan; findings: Calibrated against master meter. NOTE: as-found error -7.8% (reading low). As-left within \u00b10.5%. Recommend orifice plate inspection at next shutdown \u2014 edge wear suspected, drift likely to recur.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q068"
+  },
+  {
+    "q": "What work was done on V-201 on 2026-02-03?",
+    "truth": "PSV-201A pop test (bench) (WO-2026-0129), technician S. Venkatesan. Findings: Set pressure verified 18 bar. Certified for 1 year.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q069"
+  },
+  {
+    "q": "Who performed work order WO-2026-0129 and what were the findings?",
+    "truth": "S. Venkatesan; findings: Set pressure verified 18 bar. Certified for 1 year.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q070"
+  },
+  {
+    "q": "What work was done on V-202 on 2026-02-03?",
+    "truth": "PSV-202A pop test (bench) (WO-2026-0130), technician S. Venkatesan. Findings: Set pressure verified 12 bar.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q071"
+  },
+  {
+    "q": "Who performed work order WO-2026-0130 and what were the findings?",
+    "truth": "S. Venkatesan; findings: Set pressure verified 12 bar.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q072"
+  },
+  {
+    "q": "What work was done on C-401 on 2025-10-01?",
+    "truth": "Level transmitter LT-401 erratic reading (WO-2025-0499), technician S. Venkatesan. Findings: Impulse line choked. Flushed line and restored.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q073"
+  },
+  {
+    "q": "Who performed work order WO-2025-0499 and what were the findings?",
+    "truth": "S. Venkatesan; findings: Impulse line choked. Flushed line and restored.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q074"
+  },
+  {
+    "q": "What work was done on HE-301 on 2026-02-20?",
+    "truth": "Thermography survey (WO-2026-0201), technician Arjun Mehta. Findings: No abnormal hot spots.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q075"
+  },
+  {
+    "q": "Who performed work order WO-2026-0201 and what were the findings?",
+    "truth": "Arjun Mehta; findings: No abnormal hot spots.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q076"
+  },
+  {
+    "q": "What work was done on P-103 on 2026-05-12?",
+    "truth": "Vibration route reading (WO-2026-0450), technician Sunil Yadav. Findings: 2.6 mm/s. Normal.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q077"
+  },
+  {
+    "q": "Who performed work order WO-2026-0450 and what were the findings?",
+    "truth": "Sunil Yadav; findings: 2.6 mm/s. Normal.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q078"
+  },
+  {
+    "q": "What work was done on K-101 on 2026-06-15?",
+    "truth": "Vibration and rod drop route reading (WO-2026-0521), technician Sunil Yadav. Findings: Normal.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q079"
+  },
+  {
+    "q": "Who performed work order WO-2026-0521 and what were the findings?",
+    "truth": "Sunil Yadav; findings: Normal.",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q080"
+  },
+  {
+    "q": "What was the root cause of incident INC-2025-0047?",
+    "truth": "Overdue maintenance and seal degradation accelerated by sustained high-temperature operation above 70\u00b0C. Seal specification marginal for thermal cycling duty.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q081"
+  },
+  {
+    "q": "What corrective action followed incident INC-2025-0047?",
+    "truth": "Seal replaced (WO-2025-0388). Preventive maintenance interval reduced from 180 to 90 days. Seal specification review with OEM initiated.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q082"
+  },
+  {
+    "q": "What was the root cause of incident INC-2024-0089?",
+    "truth": "Gas testing performed more than 30 minutes before entry, against OISD-105/SOP-CS-012 requirement. Residual hydrocarbon desorbed from sludge after initial test.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q083"
+  },
+  {
+    "q": "What corrective action followed incident INC-2024-0089?",
+    "truth": "SOP-CS-012 re-briefed to all crews. Gas test validity window strictly enforced at 30 minutes. Continuous monitoring made mandatory for vessels with sludge history.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q084"
+  },
+  {
+    "q": "What was the root cause of incident INC-2024-0031?",
+    "truth": "Re-entry after break treated as continuation of original entry. Gas testing not repeated as required before re-entry.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q085"
+  },
+  {
+    "q": "What corrective action followed incident INC-2024-0031?",
+    "truth": "Re-entry gas testing requirement added to PTW checklist. Toolbox talk conducted across Unit 3 and Unit 4.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q086"
+  },
+  {
+    "q": "What was the root cause of incident INC-2025-0102?",
+    "truth": "Chloride stress corrosion cracking at tube-to-tubesheet joints. Cooling water chloride excursion in Aug 2025 identified as contributing factor.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q087"
+  },
+  {
+    "q": "What corrective action followed incident INC-2025-0102?",
+    "truth": "6 tubes plugged (WO-2025-0489). Cooling water chloride monitoring frequency increased to daily. Metallurgy upgrade study initiated.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q088"
+  },
+  {
+    "q": "What was the root cause of incident INC-2026-0011?",
+    "truth": "Seal failure (second in 8 months, same pattern as P-101). Standby auto-start defeated by switch position \u2014 human factor.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q089"
+  },
+  {
+    "q": "What corrective action followed incident INC-2026-0011?",
+    "truth": "Seal replaced (WO-2026-0114). Selector switch position added to shift handover checklist.",
+    "category": "FAILURE_ANALYSIS",
+    "id": "Q090"
+  },
+  {
+    "q": "Where is P-101 located and what is its criticality?",
+    "truth": "Bay 7, North Side, Unit 3; criticality HIGH",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q091"
+  },
+  {
+    "q": "Where is P-102 located and what is its criticality?",
+    "truth": "Bay 7, North Side, Unit 3; criticality HIGH",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q092"
+  },
+  {
+    "q": "Where is P-103 located and what is its criticality?",
+    "truth": "Bay 5, Unit 3; criticality MEDIUM",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q093"
+  },
+  {
+    "q": "Where is P-104 located and what is its criticality?",
+    "truth": "South Tank Farm, Unit 3; criticality LOW",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q094"
+  },
+  {
+    "q": "Where is P-201 located and what is its criticality?",
+    "truth": "Bay 2, Unit 4; criticality HIGH",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q095"
+  },
+  {
+    "q": "Where is P-301 located and what is its criticality?",
+    "truth": "Bay 1, Unit 5; criticality HIGH",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q096"
+  },
+  {
+    "q": "Where is HE-301 located and what is its criticality?",
+    "truth": "Feed Section, Unit 3; criticality HIGH",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q097"
+  },
+  {
+    "q": "Where is HE-302 located and what is its criticality?",
+    "truth": "Product Section, Unit 3; criticality MEDIUM",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q098"
+  },
+  {
+    "q": "Where is HE-303 located and what is its criticality?",
+    "truth": "Column Section, Unit 3; criticality HIGH",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q099"
+  },
+  {
+    "q": "Where is V-201 located and what is its criticality?",
+    "truth": "Feed Section, Unit 3; criticality HIGH",
+    "category": "FACTUAL_LOOKUP",
+    "id": "Q100"
+  }
+]

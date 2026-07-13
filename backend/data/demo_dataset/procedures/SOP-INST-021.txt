@@ -1,0 +1,10 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+SOP-INST-021 Rev 4 | Effective: 18-Sep-2024
+FIELD INSTRUMENT CALIBRATION PROCEDURE
+Applicable: Flow, pressure, level, temperature transmitters | Regulatory Basis: OISD-117
+1. Obtain instrument work permit; inform panel officer before taking instrument out of service.
+2. Record as-found readings at 0/25/50/75/100% against master calibrator.
+3. Acceptance: within ±0.5% of span. Outside limits: adjust and record as-left values.
+4. Flow meters: verify against master meter where line configuration allows.
+5. Update calibration sticker and CMMS record. Deviations beyond ±5% must be reported
+   to process engineering for historical data correction assessment.

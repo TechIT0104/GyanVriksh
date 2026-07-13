@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+.env
+node_modules/
+dist/
+backend/models/ner_model/
+backend/models/bge-m3/
+backend/models/whisper-large-v3/
+gpu-training/gyanvriksh-ner/
+*.wav
+*.mp3
+.DS_Store
+
+# Python envs / caches
+venv/
+.venv/
+backend/venv/
+.pytest_cache/
+*.egg-info/
+*.log
+
+# Secrets — never commit real credentials
+.env
+.env.local
+backend/.env
+*.pem
+*.key
+
+# Build / deploy
+frontend/dist/
+frontend/.vite/

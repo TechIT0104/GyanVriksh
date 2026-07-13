@@ -1,0 +1,7 @@
+BHARAT CHEMICALS LIMITED — INTERNAL HSE AUDIT REPORT AUDIT-2025-INT-04
+Date: 18-Dec-2025 | Auditor: Kavita Rao (Grade-B HSE) | Scope: Unit 3 confined space entries
+Finding 1 (MAJOR): WO-2025-0610 (V-201 entry) — gas test performed 25 minutes before entry is
+within OISD-105 limit, but the second entry after tea break did not repeat gas testing.
+Reference: OISD-105 §4.3, SOP-CS-012 Section 6.2.
+Finding 2 (MINOR): Entry logs for V-202 missing exit timestamps for 2 of 6 entries.
+Recommendation: Enforce re-entry gas testing; refresher training for attendants.

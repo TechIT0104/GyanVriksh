@@ -1,0 +1,9 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+SOP-SD-003 Rev 2 | Effective: 20-Aug-2025
+UNIT 3 PLANNED SHUTDOWN PROCEDURE
+Regulatory Basis: OISD-117
+1. Feed reduction ramp: 100% to 40% over 4 hours; coordinate with offsites.
+2. Stop feed pump P-101/P-102; switch C-401 to total reflux.
+3. Depressurise via flare at max 2 bar/hour to avoid thermal shock to HE-303.
+4. Steam-out and nitrogen purge sequence per Appendix A before handover to maintenance.
+5. Verify LEL below 5% at all sample points before issuing vessel entry permits.

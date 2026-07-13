@@ -1,0 +1,433 @@
+[
+  {
+    "wo_id": "WO-2024-0512",
+    "date": "2024-11-08",
+    "type": "CORRECTIVE",
+    "equipment_tag": "P-101",
+    "description": "Mechanical seal replacement after leak detected",
+    "technician": "Ramesh Kumar",
+    "time_taken_hrs": 5.0,
+    "parts_used": [
+      "Seal Kit SK-101-A"
+    ],
+    "cost_inr": 42000,
+    "findings": "Seal face worn beyond tolerance. Operating temp logged >70\u00b0C during preceding week.",
+    "procedure": "SOP-MAINT-047"
+  },
+  {
+    "wo_id": "WO-2025-0119",
+    "date": "2025-03-02",
+    "type": "CORRECTIVE",
+    "equipment_tag": "P-101",
+    "description": "Mechanical seal replacement \u2014 seal failure during night shift",
+    "technician": "Ramesh Kumar",
+    "time_taken_hrs": 4.0,
+    "parts_used": [
+      "Seal Kit SK-101-A",
+      "O-Ring Set OR-22"
+    ],
+    "cost_inr": 45500,
+    "findings": "Spring fatigue observed on seal assembly. Slight shaft vibration noted before failure per operator log. High-temperature operation >70\u00b0C recorded.",
+    "procedure": "SOP-MAINT-047"
+  },
+  {
+    "wo_id": "WO-2025-0388",
+    "date": "2025-07-24",
+    "type": "CORRECTIVE",
+    "equipment_tag": "P-101",
+    "description": "Seal replacement following INC-2025-0047 hydrocarbon leak",
+    "technician": "Ramesh Kumar",
+    "time_taken_hrs": 6.5,
+    "parts_used": [
+      "Seal Kit SK-101-A",
+      "O-Ring Set OR-22",
+      "Gland Packing GP-4"
+    ],
+    "cost_inr": 58000,
+    "findings": "Seal face worn beyond tolerance, spring fatigue observed. Suction strainer found partially clogged with sediment.",
+    "procedure": "SOP-MAINT-047"
+  },
+  {
+    "wo_id": "WO-2026-0831",
+    "date": "2026-03-15",
+    "type": "CORRECTIVE",
+    "equipment_tag": "P-101",
+    "description": "Mechanical seal replacement",
+    "technician": "Ramesh Kumar",
+    "time_taken_hrs": 4.5,
+    "parts_used": [
+      "Seal Kit SK-101-A",
+      "O-Ring Set OR-22"
+    ],
+    "cost_inr": 45000,
+    "findings": "Seal face worn beyond tolerance, spring fatigue observed. Operating temperature >70\u00b0C in 3 of last 4 weeks.",
+    "procedure": "SOP-MAINT-047"
+  },
+  {
+    "wo_id": "WO-2025-0201",
+    "date": "2025-04-15",
+    "type": "PREVENTIVE",
+    "equipment_tag": "P-101",
+    "description": "Quarterly PM: alignment check, lubrication, vibration reading",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 2.0,
+    "parts_used": [
+      "Grease EP-2"
+    ],
+    "cost_inr": 3500,
+    "findings": "Vibration 4.2 mm/s (alert limit 4.5). Slight increase vs last reading 3.1 mm/s.",
+    "procedure": "SOP-MAINT-012"
+  },
+  {
+    "wo_id": "WO-2025-0602",
+    "date": "2025-11-20",
+    "type": "PREVENTIVE",
+    "equipment_tag": "P-101",
+    "description": "Quarterly PM and suction strainer cleaning",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 2.5,
+    "parts_used": [],
+    "cost_inr": 2800,
+    "findings": "Strainer 40% clogged with sediment. Cleaned. Recommend morning strainer check before startup.",
+    "procedure": "SOP-MAINT-012"
+  },
+  {
+    "wo_id": "WO-2025-0290",
+    "date": "2025-06-11",
+    "type": "CORRECTIVE",
+    "equipment_tag": "P-201",
+    "description": "Mechanical seal replacement",
+    "technician": "Ramesh Kumar",
+    "time_taken_hrs": 4.5,
+    "parts_used": [
+      "Seal Kit SK-101-A"
+    ],
+    "cost_inr": 44000,
+    "findings": "Seal face wear similar to P-101 pattern. Same seal specification.",
+    "procedure": "SOP-MAINT-047"
+  },
+  {
+    "wo_id": "WO-2026-0114",
+    "date": "2026-01-28",
+    "type": "CORRECTIVE",
+    "equipment_tag": "P-201",
+    "description": "Seal leak \u2014 replaced mechanical seal",
+    "technician": "Arjun Mehta",
+    "time_taken_hrs": 5.0,
+    "parts_used": [
+      "Seal Kit SK-101-A",
+      "O-Ring Set OR-22"
+    ],
+    "cost_inr": 46500,
+    "findings": "Spring fatigue on seal assembly. Second failure in 8 months on this tag.",
+    "procedure": "SOP-MAINT-047"
+  },
+  {
+    "wo_id": "WO-2026-0233",
+    "date": "2026-02-10",
+    "type": "PREVENTIVE",
+    "equipment_tag": "P-201",
+    "description": "Half-yearly PM",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 2.0,
+    "parts_used": [
+      "Grease EP-2"
+    ],
+    "cost_inr": 3200,
+    "findings": "Normal. Vibration 2.8 mm/s.",
+    "procedure": "SOP-MAINT-012"
+  },
+  {
+    "wo_id": "WO-2026-0501",
+    "date": "2026-06-01",
+    "type": "PREVENTIVE",
+    "equipment_tag": "P-301",
+    "description": "Half-yearly PM",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 2.0,
+    "parts_used": [
+      "Grease EP-2"
+    ],
+    "cost_inr": 3200,
+    "findings": "Normal. AESSEAL MG1 seal in excellent condition \u2014 no seal failure since 2018 installation.",
+    "procedure": "SOP-MAINT-012"
+  },
+  {
+    "wo_id": "WO-2026-0087",
+    "date": "2026-01-18",
+    "type": "PREVENTIVE",
+    "equipment_tag": "P-103",
+    "description": "Half-yearly PM, coupling inspection",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 2.5,
+    "parts_used": [
+      "Coupling Insert CI-08"
+    ],
+    "cost_inr": 6800,
+    "findings": "Coupling insert worn, replaced.",
+    "procedure": "SOP-MAINT-012"
+  },
+  {
+    "wo_id": "WO-2025-0455",
+    "date": "2025-09-03",
+    "type": "CORRECTIVE",
+    "equipment_tag": "P-103",
+    "description": "Cavitation noise investigation",
+    "technician": "Ramesh Kumar",
+    "time_taken_hrs": 3.0,
+    "parts_used": [],
+    "cost_inr": 4500,
+    "findings": "NPSH margin low at reduced drum level. Cavitation confirmed. Operations advised to maintain V-201 level above 40%.",
+    "procedure": "SOP-MAINT-012"
+  },
+  {
+    "wo_id": "WO-2026-0402",
+    "date": "2026-04-25",
+    "type": "PREVENTIVE",
+    "equipment_tag": "P-104",
+    "description": "Annual PM",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 3.0,
+    "parts_used": [
+      "Gear Oil SP-220"
+    ],
+    "cost_inr": 5200,
+    "findings": "Normal.",
+    "procedure": "SOP-MAINT-012"
+  },
+  {
+    "wo_id": "WO-2026-0410",
+    "date": "2026-05-02",
+    "type": "PREVENTIVE",
+    "equipment_tag": "P-102",
+    "description": "Standby pump changeover run and PM",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 2.0,
+    "parts_used": [],
+    "cost_inr": 2500,
+    "findings": "Ran normally for 8 hours on changeover.",
+    "procedure": "SOP-MAINT-012"
+  },
+  {
+    "wo_id": "WO-2025-0570",
+    "date": "2025-11-20",
+    "type": "PREVENTIVE",
+    "equipment_tag": "HE-301",
+    "description": "Annual cleaning and eddy current tube inspection",
+    "technician": "Arjun Mehta",
+    "time_taken_hrs": 24.0,
+    "parts_used": [
+      "Gasket Set GS-T20"
+    ],
+    "cost_inr": 185000,
+    "findings": "Fouling on tube side reduced heat transfer ~12%. 3 tubes plugged (of 400) due to thinning.",
+    "procedure": "SOP-MAINT-055"
+  },
+  {
+    "wo_id": "WO-2026-0140",
+    "date": "2026-02-14",
+    "type": "PREVENTIVE",
+    "equipment_tag": "HE-302",
+    "description": "Annual cleaning",
+    "technician": "Arjun Mehta",
+    "time_taken_hrs": 16.0,
+    "parts_used": [
+      "Gasket Set GS-T15"
+    ],
+    "cost_inr": 95000,
+    "findings": "Light fouling. Cleaned.",
+    "procedure": "SOP-MAINT-055"
+  },
+  {
+    "wo_id": "WO-2025-0489",
+    "date": "2025-09-30",
+    "type": "CORRECTIVE",
+    "equipment_tag": "HE-303",
+    "description": "Reboiler tube leak repair",
+    "technician": "Arjun Mehta",
+    "time_taken_hrs": 36.0,
+    "parts_used": [
+      "Tube Plug TP-19 x6"
+    ],
+    "cost_inr": 240000,
+    "findings": "6 tubes leaking due to corrosion at tube-to-tubesheet joint. Plugged. Recommend metallurgy review \u2014 chloride stress corrosion suspected.",
+    "procedure": "SOP-MAINT-055"
+  },
+  {
+    "wo_id": "WO-2025-0610",
+    "date": "2025-12-05",
+    "type": "PREVENTIVE",
+    "equipment_tag": "V-201",
+    "description": "Statutory internal inspection (confined space entry)",
+    "technician": "Arjun Mehta",
+    "time_taken_hrs": 18.0,
+    "parts_used": [],
+    "cost_inr": 65000,
+    "findings": "Internal inspection satisfactory. Minor pitting <0.5mm on bottom shell. Gas testing performed 25 min before entry \u2014 flagged by HSE as exceeding 30-min validity window during audit.",
+    "procedure": "SOP-CS-012"
+  },
+  {
+    "wo_id": "WO-2025-0611",
+    "date": "2025-12-05",
+    "type": "PREVENTIVE",
+    "equipment_tag": "V-202",
+    "description": "Statutory internal inspection (confined space entry)",
+    "technician": "Arjun Mehta",
+    "time_taken_hrs": 14.0,
+    "parts_used": [],
+    "cost_inr": 52000,
+    "findings": "Satisfactory.",
+    "procedure": "SOP-CS-012"
+  },
+  {
+    "wo_id": "WO-2026-0301",
+    "date": "2026-03-01",
+    "type": "PREVENTIVE",
+    "equipment_tag": "V-203",
+    "description": "Internal inspection (confined space entry)",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 12.0,
+    "parts_used": [],
+    "cost_inr": 48000,
+    "findings": "Demister pad partially collapsed, replaced under separate WO.",
+    "procedure": "SOP-CS-012"
+  },
+  {
+    "wo_id": "WO-2025-0520",
+    "date": "2025-10-15",
+    "type": "PREVENTIVE",
+    "equipment_tag": "C-401",
+    "description": "Column internals inspection during shutdown",
+    "technician": "Arjun Mehta",
+    "time_taken_hrs": 48.0,
+    "parts_used": [
+      "Tray Valve Set TV-28 x40"
+    ],
+    "cost_inr": 420000,
+    "findings": "Trays 12-15 valve wear, replaced. Downcomer clearances OK.",
+    "procedure": "SOP-SD-003"
+  },
+  {
+    "wo_id": "WO-2026-0350",
+    "date": "2026-04-10",
+    "type": "PREVENTIVE",
+    "equipment_tag": "K-101",
+    "description": "6-monthly PM: valve inspection, rod drop check",
+    "technician": "Ramesh Kumar",
+    "time_taken_hrs": 10.0,
+    "parts_used": [
+      "Valve Plate Kit VP-HHE x2"
+    ],
+    "cost_inr": 88000,
+    "findings": "2nd stage suction valve plates worn, replaced. Rod drop within limits.",
+    "procedure": "SOP-MAINT-062"
+  },
+  {
+    "wo_id": "WO-2025-0333",
+    "date": "2025-07-02",
+    "type": "CORRECTIVE",
+    "equipment_tag": "K-101",
+    "description": "High discharge temperature alarm investigation",
+    "technician": "Ramesh Kumar",
+    "time_taken_hrs": 6.0,
+    "parts_used": [
+      "Valve Plate Kit VP-HHE"
+    ],
+    "cost_inr": 52000,
+    "findings": "3rd stage discharge valve leaking causing recompression heating. Replaced.",
+    "procedure": "SOP-MAINT-062"
+  },
+  {
+    "wo_id": "WO-2024-0450",
+    "date": "2024-08-20",
+    "type": "PREVENTIVE",
+    "equipment_tag": "FI-101",
+    "description": "Flow meter calibration",
+    "technician": "S. Venkatesan",
+    "time_taken_hrs": 3.0,
+    "parts_used": [],
+    "cost_inr": 8000,
+    "findings": "Calibrated against master meter. NOTE: as-found error -7.8% (reading low). As-left within \u00b10.5%. Recommend orifice plate inspection at next shutdown \u2014 edge wear suspected, drift likely to recur.",
+    "procedure": "SOP-INST-021"
+  },
+  {
+    "wo_id": "WO-2026-0129",
+    "date": "2026-02-03",
+    "type": "PREVENTIVE",
+    "equipment_tag": "V-201",
+    "description": "PSV-201A pop test (bench)",
+    "technician": "S. Venkatesan",
+    "time_taken_hrs": 4.0,
+    "parts_used": [],
+    "cost_inr": 12000,
+    "findings": "Set pressure verified 18 bar. Certified for 1 year.",
+    "procedure": "SOP-INST-034"
+  },
+  {
+    "wo_id": "WO-2026-0130",
+    "date": "2026-02-03",
+    "type": "PREVENTIVE",
+    "equipment_tag": "V-202",
+    "description": "PSV-202A pop test (bench)",
+    "technician": "S. Venkatesan",
+    "time_taken_hrs": 4.0,
+    "parts_used": [],
+    "cost_inr": 12000,
+    "findings": "Set pressure verified 12 bar.",
+    "procedure": "SOP-INST-034"
+  },
+  {
+    "wo_id": "WO-2025-0499",
+    "date": "2025-10-01",
+    "type": "CORRECTIVE",
+    "equipment_tag": "C-401",
+    "description": "Level transmitter LT-401 erratic reading",
+    "technician": "S. Venkatesan",
+    "time_taken_hrs": 2.5,
+    "parts_used": [
+      "Impulse Line Kit"
+    ],
+    "cost_inr": 9500,
+    "findings": "Impulse line choked. Flushed line and restored.",
+    "procedure": "SOP-INST-021"
+  },
+  {
+    "wo_id": "WO-2026-0201",
+    "date": "2026-02-20",
+    "type": "PREVENTIVE",
+    "equipment_tag": "HE-301",
+    "description": "Thermography survey",
+    "technician": "Arjun Mehta",
+    "time_taken_hrs": 2.0,
+    "parts_used": [],
+    "cost_inr": 6000,
+    "findings": "No abnormal hot spots.",
+    "procedure": "SOP-MAINT-055"
+  },
+  {
+    "wo_id": "WO-2026-0450",
+    "date": "2026-05-12",
+    "type": "PREVENTIVE",
+    "equipment_tag": "P-103",
+    "description": "Vibration route reading",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 1.0,
+    "parts_used": [],
+    "cost_inr": 1500,
+    "findings": "2.6 mm/s. Normal.",
+    "procedure": "SOP-MAINT-012"
+  },
+  {
+    "wo_id": "WO-2026-0521",
+    "date": "2026-06-15",
+    "type": "PREVENTIVE",
+    "equipment_tag": "K-101",
+    "description": "Vibration and rod drop route reading",
+    "technician": "Sunil Yadav",
+    "time_taken_hrs": 1.5,
+    "parts_used": [],
+    "cost_inr": 1800,
+    "findings": "Normal.",
+    "procedure": "SOP-MAINT-062"
+  }
+]

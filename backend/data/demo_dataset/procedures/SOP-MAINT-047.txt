@@ -1,0 +1,33 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+STANDARD OPERATING PROCEDURE
+SOP-MAINT-047 Rev 3 | Effective: 10-Jan-2025 | Approver: Plant Safety Manager
+CENTRIFUGAL PUMP MECHANICAL SEAL REPLACEMENT PROCEDURE
+Applicable Equipment: P-101, P-102, P-103, P-201, P-301 | Risk Level: MEDIUM
+Regulatory Basis: OISD-116 Section 5.3
+
+1. SCOPE
+This procedure covers replacement of mechanical seals on centrifugal pumps in Unit 3 and Unit 4.
+
+2. PRE-JOB REQUIREMENTS
+Step 1. Issue PTW for the job. Attach JSA to the permit.
+Step 2. Isolate suction and discharge valves. Lock and tag per SOP-LOTO-001.
+Step 3. Depressurise pump casing through vent valve. Verify zero pressure on local gauge.
+Step 4. Drain pump casing via drain valve DV-101A to closed drain header.
+Step 5. Verify electrical isolation at MCC — breaker racked out, tagged by electrician.
+
+3. SEAL REPLACEMENT
+Step 6. Remove coupling guard and flexible coupling.
+Step 7. Extract seal assembly per OEM drawing KBL-150-125-315-SD.
+Step 8. Inspect shaft sleeve for scoring. Replace if wear exceeds 0.05 mm.
+Step 9. Install new seal kit (SK-101-A). Ensure seal faces are clean; do not touch faces with bare hands.
+Step 10. Set seal working length per OEM specification: 42.5 mm.
+Step 11. Reassemble coupling, verify alignment within 0.05 mm TIR.
+
+4. POST-JOB
+Step 12. Remove locks and tags in reverse order. Close drain valve.
+Step 13. Prime pump; vent air from casing.
+Step 14. Trial run for 30 minutes. Check seal for leaks, vibration below 4.5 mm/s.
+Step 15. Close PTW and record findings in work order.
+
+NOTE: For pumps with repeated seal failures, check suction strainer condition and record
+operating temperature history in the work order findings.

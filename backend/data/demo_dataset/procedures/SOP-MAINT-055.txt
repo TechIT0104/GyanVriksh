@@ -1,0 +1,10 @@
+BHARAT CHEMICALS LIMITED — UNIT 3
+SOP-MAINT-055 Rev 2 | Effective: 05-Apr-2024
+SHELL AND TUBE HEAT EXCHANGER CLEANING AND INSPECTION
+Applicable: HE-301, HE-302, HE-303 | Regulatory Basis: OISD-116 Section 7
+1. Cold work permit plus confined space permit if bundle pulled into enclosure.
+2. Isolate, depressurise, drain and steam out both shell and tube sides.
+3. Hydro-jet cleaning at max 700 bar; operators in full PPE with deadman control.
+4. Eddy current testing of 100% tubes at each statutory inspection.
+5. Plug tubes with wall loss over 40%. Record plugged tube map in inspection dossier.
+6. Gasket replacement mandatory at every box-up; torque per OEM sequence.
