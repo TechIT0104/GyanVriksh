@@ -1,4 +1,4 @@
-# GyanVriksh — Tree of Knowledge
+# GyanVriksh - Tree of Knowledge
 
 AI-powered industrial knowledge intelligence platform built for ET AI Hackathon 2026, Problem Statement 8.
 
